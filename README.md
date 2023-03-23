@@ -29,3 +29,9 @@ git branch --set-upstream-to=origin/main main # not 100% certain this is require
 git checkout main -f
 git log
 ```
+
+scp age key to folder
+
+```bash
+scp ~/.config/sops/age/keys.txt vyos@<ip>:/config/secrets/age.txt
+```
