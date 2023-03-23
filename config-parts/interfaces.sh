@@ -1,0 +1,37 @@
+#!/bin/vbash
+
+set interfaces ethernet eth0 address 'dhcp'
+set interfaces ethernet eth0 description 'WAN'
+set interfaces ethernet eth0 hw-id 'e4:3a:6e:5f:33:9c'
+
+set interfaces ethernet eth1 address '10.8.10.249/24'
+set interfaces ethernet eth1 description 'LAN'
+set interfaces ethernet eth1 hw-id '7c:2b:e1:13:f7:79'
+set interfaces ethernet eth1 vif 10 address '10.8.10.1/24'
+set interfaces ethernet eth1 vif 10 description 'TRUSTED'
+set interfaces ethernet eth1 vif 20 address '10.8.20.1/24'
+set interfaces ethernet eth1 vif 20 description 'SERVERS'
+set interfaces ethernet eth1 vif 40 address '10.8.30.1/24'
+set interfaces ethernet eth1 vif 40 description 'IOT'
+set interfaces ethernet eth1 vif 50 address '10.8.40.1/24'
+set interfaces ethernet eth1 vif 50 description 'VIDEO'
+set interfaces ethernet eth1 vif 30 address '10.8.50.1/24'
+set interfaces ethernet eth1 vif 30 description 'GUEST'
+
+set interfaces ethernet eth2 hw-id '7c:2b:e1:13:f7:7a'
+set interfaces ethernet eth3 hw-id '7c:2b:e1:13:f7:7b'
+set interfaces ethernet eth4 hw-id '7c:2b:e1:13:f7:7c'
+
+# set interfaces wireguard wg01 address '10.8.11.1/24'
+# set interfaces wireguard wg01 description 'WIREGUARD'
+# set interfaces wireguard wg01 peer ipad-bernd allowed-ips '10.8.11.4/32'
+# set interfaces wireguard wg01 peer ipad-bernd persistent-keepalive '15'
+# set interfaces wireguard wg01 peer ipad-bernd public-key 'EYuUoDoCIcSYbnjNyPSsZUcz4Yp032AHWflYlH2V1EM='
+# set interfaces wireguard wg01 peer iphone-bernd allowed-ips '10.8.11.2/32'
+# set interfaces wireguard wg01 peer iphone-bernd persistent-keepalive '15'
+# set interfaces wireguard wg01 peer iphone-bernd public-key '608IT2YRPTCabLMGnpYfIWhgDnEpLV5IIpYi5J7m3As='
+# set interfaces wireguard wg01 peer macbook-bernd allowed-ips '10.8.11.3/32'
+# set interfaces wireguard wg01 peer macbook-bernd persistent-keepalive '15'
+# set interfaces wireguard wg01 peer macbook-bernd public-key 'iWKTc88fDBhqlsAgoCXYvkBdf9wG4YBZ8XTg/+0Ln2I='
+# set interfaces wireguard wg01 port '51820'
+# set interfaces wireguard wg01 private-key "${SECRET_WIREGUARD_PRIVATE_KEY}"
