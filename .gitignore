@@ -6,6 +6,7 @@
 !/.sops.yaml
 !/apply-config.sh
 !/LICENSE
+!/secrets.sops.env
 
 # VyOS config
 !scripts/
