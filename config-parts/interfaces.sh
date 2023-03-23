@@ -20,7 +20,6 @@ set interfaces ethernet eth1 vif 30 description 'GUEST'
 
 set interfaces ethernet eth2 hw-id '7c:2b:e1:13:f7:7a'
 set interfaces ethernet eth3 hw-id '7c:2b:e1:13:f7:7b'
-set interfaces ethernet eth4 hw-id '7c:2b:e1:13:f7:7c'
 
 # set interfaces wireguard wg01 address '10.8.11.1/24'
 # set interfaces wireguard wg01 description 'WIREGUARD'
