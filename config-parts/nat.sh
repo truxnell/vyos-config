@@ -5,14 +5,14 @@ set nat destination rule 100 description 'HTTPS'
 set nat destination rule 100 destination port '443'
 set nat destination rule 100 inbound-interface 'eth0'
 set nat destination rule 100 protocol 'tcp'
-set nat destination rule 100 translation address '10.8.20.210'
+set nat destination rule 100 translation address '10.7.20.210'
 set nat destination rule 100 translation port '443'
 
 set nat destination rule 101 description 'HTTP'
 set nat destination rule 101 destination port '80'
 set nat destination rule 101 inbound-interface 'eth0'
 set nat destination rule 101 protocol 'tcp'
-set nat destination rule 101 translation address '10.8.20.210'
+set nat destination rule 101 translation address '10.7.20.210'
 set nat destination rule 101 translation port '80'
 
 # Force DNS
@@ -33,11 +33,11 @@ set nat destination rule 101 translation port '80'
 # set nat destination rule 103 translation port '53'
 #
 # set nat destination rule 104 description 'Force NTP for LAN'
-# set nat destination rule 104 destination address '!10.8.10.1'
+# set nat destination rule 104 destination address '!10.7.10.1'
 # set nat destination rule 104 destination port '123'
 # set nat destination rule 104 inbound-interface 'eth1'
 # set nat destination rule 104 protocol 'udp'
-# set nat destination rule 104 translation address '10.8.10.1'
+# set nat destination rule 104 translation address '10.7.10.1'
 # set nat destination rule 104 translation port '123'
 
 # Force NTP

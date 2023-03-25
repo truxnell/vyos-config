@@ -13,6 +13,8 @@ To install from live image, `install image` and follow prompts.
 
 Get basic network running in installed image
 
+## Vyos
+
 ```
 confiure
 
@@ -23,6 +25,18 @@ set system name-server 1.1.1.1
 
 ```
 cd /config
+mkdir secrets
+```
+
+## Local
+
+```
+scp ~/.config/sops/age/keys.txt vyos@<VYOS-IP>:/config/secrets/age.key
+```
+
+## Vyos
+
+```
 git init
 git remote add origin git@github.com:<repo>.git
 git branch --set-upstream-to=origin/main main # not 100% certain this is required
