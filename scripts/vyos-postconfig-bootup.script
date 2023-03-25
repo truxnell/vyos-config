@@ -17,8 +17,9 @@ END
 tee -a /home/vyos/.bash_aliases <<END
 export SOPS_AGE_KEY_FILE=/config/secrets/age.key
 export GIT_SSH_COMMAND="ssh -i /config/secrets/id_ed25519"
-export VISUAL=nano
-export EDITOR=nano
+export VISUAL=vi
+export EDITOR=vi
 alias podman="sudo podman"
+alias update="cd /config && git pull && ./apply-config.sh"
 END
 #
