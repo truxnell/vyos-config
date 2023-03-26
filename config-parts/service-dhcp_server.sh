@@ -23,6 +23,17 @@ set service dhcp-server shared-network-name SERVERS subnet 10.8.20.0/24 name-ser
 set service dhcp-server shared-network-name SERVERS subnet 10.8.20.0/24 range 0 start '10.8.20.200'
 set service dhcp-server shared-network-name SERVERS subnet 10.8.20.0/24 range 0 stop '10.8.20.254'
 
+set service dhcp-server shared-network-name SERVERS subnet 10.8.20.0/24 static-mapping xerxes ip-address '10.8.20.40'
+set service dhcp-server shared-network-name SERVERS subnet 10.8.20.0/24 static-mapping xerxes mac-address '1c:69:7a:61:1c:fd'
+set service dhcp-server shared-network-name SERVERS subnet 10.8.20.0/24 static-mapping shodan ip-address '10.8.20.42'
+set service dhcp-server shared-network-name SERVERS subnet 10.8.20.0/24 static-mapping shodan mac-address '00:1f:c6:9c:59:bd'
+set service dhcp-server shared-network-name SERVERS subnet 10.8.20.0/24 static-mapping tycho ip-address '10.8.20.44'
+set service dhcp-server shared-network-name SERVERS subnet 10.8.20.0/24 static-mapping tycho mac-address '1c:69:7a:a8:a3:bc'
+set service dhcp-server shared-network-name SERVERS subnet 10.8.20.0/24 static-mapping technocore ip-address '10.8.20.44'
+set service dhcp-server shared-network-name SERVERS subnet 10.8.20.0/24 static-mapping technocore mac-address 'e4:5f:01:81:6f:e9'
+set service dhcp-server shared-network-name SERVERS subnet 10.8.20.0/24 static-mapping helios ip-address '10.8.20.11'
+set service dhcp-server shared-network-name SERVERS subnet 10.8.20.0/24 static-mapping helios mac-address '3c:8c:f8:f9:c8:69'
+
 # IoT VLAN
 set service dhcp-server shared-network-name IOT authoritative
 set service dhcp-server shared-network-name IOT ping-check
