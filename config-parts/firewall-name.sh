@@ -8,7 +8,7 @@ set firewall name guest-iot enable-default-log
 # From GUEST to LAN
 set firewall name guest-lan default-action 'drop'
 set firewall name guest-lan description 'From GUEST to LAN'
-set firewall name guest-lan enable-default-loghttps://search.trux.dev/search?q=cloudflare+dnsdist
+set firewall name guest-lan enable-default-log
 
 # From GUEST to LOCAL
 set firewall name guest-local default-action 'drop'
