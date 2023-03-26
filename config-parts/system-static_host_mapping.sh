@@ -1,5 +1,5 @@
 # Gateway
-set system static-host-mapping host-name gateway.trux.dev inet 10.7.10.1
+set system static-host-mapping host-name gateway.trux.dev inet 10.8.10.1
 set system static-host-mapping host-name gateway.trux.dev alias vpn.trux.dev
 set system static-host-mapping host-name gateway.trux.dev alias ipv4.trux.dev
 
@@ -18,7 +18,7 @@ set system static-host-mapping host-name enigma.trux.dev inet 10.1.1.32
 set system static-host-mapping host-name felix.trux.dev inet 10.1.1.33
 
 # Kubernetes cluster VIP
-set system static-host-mapping host-name hegira.trux.dev inet 10.7.20.49
+set system static-host-mapping host-name hegira.trux.dev inet 10.8.20.49
 
 # Other hosts
 set system static-host-mapping host-name technocore.trux.dev inet 10.1.1.52
