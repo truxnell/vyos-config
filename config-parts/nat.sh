@@ -15,6 +15,14 @@ set nat destination rule 101 protocol 'tcp'
 set nat destination rule 101 translation address '10.8.20.210'
 set nat destination rule 101 translation port '80'
 
+# Factorio
+set nat destination rule 110 description 'Factorio - Seablock'
+set nat destination rule 110 destination port '34203'
+set nat destination rule 110 inbound-interface 'eth0'
+set nat destination rule 110 protocol 'tcp_udp'
+set nat destination rule 110 translation address '10.8.20.230'
+set nat destination rule 110 translation port '34203'
+
 # Force DNS
 # set nat destination rule 102 description 'Force DNS for IoT'
 # set nat destination rule 102 destination address '!10.5.0.4'
