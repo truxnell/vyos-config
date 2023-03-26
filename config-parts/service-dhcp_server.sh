@@ -35,6 +35,8 @@ set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 range 0 stop
 
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping zigbee-poe ip-address '10.8.30.110'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping zigbee-poe mac-address '8c:4b:14:c0:26:ff'
+set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping wled-monitor ip-address '10.8.30.52'
+set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping wled-monitor mac-address 'c4:5b:be:65:2d:02'
 
 # Kids VLAN
 set service dhcp-server shared-network-name KIDS authoritative
