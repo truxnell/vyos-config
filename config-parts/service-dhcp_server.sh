@@ -33,6 +33,9 @@ set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 name-server 
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 range 0 start '10.8.30.200'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 range 0 stop '10.8.30.254'
 
+set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping zigbee-poe ip-address '10.8.30.110'
+set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping zigbee-poe mac-address '8c:4b:14:c0:26:ff'
+
 # Video VLAN
 set service dhcp-server shared-network-name VIDEO authoritative
 set service dhcp-server shared-network-name VIDEO ping-check
