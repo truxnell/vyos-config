@@ -97,4 +97,4 @@ set container name unifi restart 'on-failure'
 set container name unifi shared-memory '0'
 set container name unifi volume data destination '/unifi'
 set container name unifi volume data source '/config/containers/unifi'
-set container name node-exporter allow-host-networks
+set container name unifi allow-host-networks
