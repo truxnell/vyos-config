@@ -20,6 +20,11 @@ set system static-host-mapping host-name helios.natallan.com inet 10.8.20.44
 # Kubernetes cluster VIP
 set system static-host-mapping host-name hegira.natallan.com inet 10.8.20.49
 
+# Kubernetes LB Ip's
+
+set system static-host-mapping host-name vector.trux.dev inet 10.8.20.220
+set system static-host-mapping host-name mqtt.trux.dev inet 10.8.20.222
+
 # Other hosts
 set system static-host-mapping host-name technocore.natallan.com inet 10.8.20.60
 set system static-host-mapping host-name technocore.natallan.com alias pikvm.trux.dev
