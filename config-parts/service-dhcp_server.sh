@@ -36,15 +36,25 @@ set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 range 0 stop
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping zigbee-poe ip-address '10.8.30.110'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping zigbee-poe mac-address '8c:4b:14:c0:26:ff'
 
+# Kids VLAN
+set service dhcp-server shared-network-name KIDS authoritative
+set service dhcp-server shared-network-name KIDS ping-check
+set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 default-router '10.8.40.1'
+set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 domain-name 'natallan.com'
+set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 lease '86400'
+set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 name-server '10.5.0.4'
+set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 range 0 start '10.8.40.200'
+set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 range 0 stop '10.8.40.254'
+
 # Video VLAN
 set service dhcp-server shared-network-name VIDEO authoritative
 set service dhcp-server shared-network-name VIDEO ping-check
-set service dhcp-server shared-network-name VIDEO subnet 10.8.40.0/24 default-router '10.8.40.1'
-set service dhcp-server shared-network-name VIDEO subnet 10.8.40.0/24 domain-name 'natallan.com'
-set service dhcp-server shared-network-name VIDEO subnet 10.8.40.0/24 lease '86400'
-set service dhcp-server shared-network-name VIDEO subnet 10.8.40.0/24 name-server '10.5.0.4'
-set service dhcp-server shared-network-name VIDEO subnet 10.8.40.0/24 range 0 start '10.8.40.200'
-set service dhcp-server shared-network-name VIDEO subnet 10.8.40.0/24 range 0 stop '10.8.40.254'
+set service dhcp-server shared-network-name VIDEO subnet 10.8.50.0/24 default-router '10.8.40.1'
+set service dhcp-server shared-network-name VIDEO subnet 10.8.50.0/24 domain-name 'natallan.com'
+set service dhcp-server shared-network-name VIDEO subnet 10.8.50.0/24 lease '86400'
+set service dhcp-server shared-network-name VIDEO subnet 10.8.50.0/24 name-server '10.5.0.4'
+set service dhcp-server shared-network-name VIDEO subnet 10.8.50.0/24 range 0 start '10.8.40.200'
+set service dhcp-server shared-network-name VIDEO subnet 10.8.50.0/24 range 0 stop '10.8.40.254'
 
 # Guest VLAN
 set service dhcp-server shared-network-name GUEST authoritative
