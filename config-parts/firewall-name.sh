@@ -445,11 +445,6 @@ set firewall name trusted-iot description 'From TRUSTED to IOT'
 set firewall name trusted-iot rule 1 action 'accept'
 set firewall name trusted-iot rule 1 description 'Rule: accept_icmp'
 set firewall name trusted-iot rule 1 protocol 'icmp'
-set firewall name trusted-iot rule 3 action 'accept'
-set firewall name trusted-iot rule 3 description 'Rule: accept_app_control_from_sonos_controllers_udp'
-set firewall name trusted-iot rule 3 destination port '136-139,1900-1901,2869,10243,10280-10284,5353,6969'
-set firewall name trusted-iot rule 3 protocol 'udp'
-set firewall name trusted-iot rule 3 source group address-group 'sonos_controllers'
 
 # From TRUSTED to LAN
 set firewall name trusted-lan default-action 'accept'
