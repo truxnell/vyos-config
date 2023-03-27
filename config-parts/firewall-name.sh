@@ -11,19 +11,19 @@ set firewall name kids-local description 'From KIDS to LAN'
 set firewall name kids-local enable-default-log
 
 # From KIDS to TRUSTED
-set firewall name kids-local default-action 'accept'
-set firewall name kids-local description 'From KIDS to TRUSTED'
-set firewall name kids-local enable-default-log
+set firewall name kids-trusted default-action 'accept'
+set firewall name kids-trusted description 'From KIDS to TRUSTED'
+set firewall name kids-trusted enable-default-log
 
 # From KIDS to SERVERS
-set firewall name kids-local default-action 'accept'
-set firewall name kids-local description 'From KIDS to SERVERS'
-set firewall name kids-local enable-default-log
+set firewall name kids-trusted default-action 'accept'
+set firewall name kids-trusted description 'From KIDS to SERVERS'
+set firewall name kids-trusted enable-default-log
 
 # From KIDS to SERVICES
-set firewall name kids-local default-action 'accept'
-set firewall name kids-local description 'From KIDS to SERVICES'
-set firewall name kids-local enable-default-log
+set firewall name kids-services default-action 'accept'
+set firewall name kids-services description 'From KIDS to SERVICES'
+set firewall name kids-services enable-default-log
 
 # From KIDS to VIDEO
 set firewall name kids-video default-action 'drop'
@@ -36,9 +36,9 @@ set firewall name kids-guest description 'From KIDS to GUEST'
 set firewall name kids-guest enable-default-log
 
 # From KIDS to WAN
-set firewall name kids-guest default-action 'accept'
-set firewall name kids-guest description 'From KIDS to GUEST'
-set firewall name kids-guest enable-default-log
+set firewall name kids-wan default-action 'accept'
+set firewall name kids-wan description 'From KIDS to GUEST'
+set firewall name kids-wan enable-default-log
 
 # From GUEST to IOT
 set firewall name guest-iot default-action 'drop'
