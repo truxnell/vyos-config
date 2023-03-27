@@ -10,7 +10,7 @@ set firewall group address-group k8s_nodes address '10.8.20.40'
 set firewall group address-group k8s_nodes address '10.8.20.42'
 set firewall group address-group k8s_nodes address '10.8.20.44'
 
-set firewall group address-group k8s_ingress_allowed address '10.8.20.210'
+set firewall group address-group k8s_ingress address '10.8.20.210'
 
 # Network groups
 set firewall group network-group cloudflare-ipv4 network '173.245.48.0/20'
