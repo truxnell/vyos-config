@@ -566,51 +566,51 @@
 # set firewall name video-wan description 'From VIDEO to WAN'
 #
 # # From WAN to GUEST
-# set firewall name wan-guest default-action 'drop'
-# set firewall name wan-guest description 'From WAN to GUEST'
-# set firewall name wan-guest enable-default-log
+set firewall name wan-guest default-action 'drop'
+set firewall name wan-guest description 'From WAN to GUEST'
+set firewall name wan-guest enable-default-log
 #
 # # From WAN to IOT
-# set firewall name wan-iot default-action 'drop'
-# set firewall name wan-iot description 'From WAN to IOT'
-# set firewall name wan-iot enable-default-log
+set firewall name wan-iot default-action 'drop'
+set firewall name wan-iot description 'From WAN to IOT'
+set firewall name wan-iot enable-default-log
 #
 # # From WAN to LAN
-# set firewall name wan-lan default-action 'drop'
-# set firewall name wan-lan description 'From WAN to LAN'
-# set firewall name wan-lan enable-default-log
+set firewall name wan-lan default-action 'drop'
+set firewall name wan-lan description 'From WAN to LAN'
+set firewall name wan-lan enable-default-log
 #
 # # From WAN to LOCAL
-# set firewall name wan-local default-action 'drop'
-# set firewall name wan-local description 'From WAN to LOCAL'
-# set firewall name wan-local enable-default-log
-# set firewall name wan-local rule 1 action 'accept'
-# set firewall name wan-local rule 1 description 'Rule: accept_wireguard'
-# set firewall name wan-local rule 1 destination port '51820'
-# set firewall name wan-local rule 1 protocol 'udp'
+set firewall name wan-local default-action 'drop'
+set firewall name wan-local description 'From WAN to LOCAL'
+set firewall name wan-local enable-default-log
+set firewall name wan-local rule 1 action 'accept'
+set firewall name wan-local rule 1 description 'Rule: accept_wireguard'
+set firewall name wan-local rule 1 destination port '51820'
+set firewall name wan-local rule 1 protocol 'udp'
 #
 # # From WAN to SERVERS
-# set firewall name wan-servers default-action 'drop'
-# set firewall name wan-servers description 'From WAN to SERVERS'
-# set firewall name wan-servers enable-default-log
-# set firewall name wan-servers rule 1 action 'accept'
-# set firewall name wan-servers rule 1 description 'Rule: accept_ingress_from_cloudflare'
-# set firewall name wan-servers rule 1 destination group address-group 'k8s_ingress'
-# set firewall name wan-servers rule 1 destination port 'http,https'
-# set firewall name wan-servers rule 1 protocol 'tcp'
-# set firewall name wan-servers rule 1 source group network-group 'cloudflare-ipv4'
+set firewall name wan-servers default-action 'drop'
+set firewall name wan-servers description 'From WAN to SERVERS'
+set firewall name wan-servers enable-default-log
+set firewall name wan-servers rule 1 action 'accept'
+set firewall name wan-servers rule 1 description 'Rule: accept_ingress_from_cloudflare'
+set firewall name wan-servers rule 1 destination group address-group 'k8s_ingress'
+set firewall name wan-servers rule 1 destination port 'http,https'
+set firewall name wan-servers rule 1 protocol 'tcp'
+set firewall name wan-servers rule 1 source group network-group 'cloudflare-ipv4'
 #
 # # From WAN to SERVICES
-# set firewall name wan-services default-action 'drop'
-# set firewall name wan-services description 'From WAN to SERVICES'
-# set firewall name wan-services enable-default-log
+set firewall name wan-services default-action 'drop'
+set firewall name wan-services description 'From WAN to SERVICES'
+set firewall name wan-services enable-default-log
 #
 # # From WAN to TRUSTED
-# set firewall name wan-trusted default-action 'drop'
-# set firewall name wan-trusted description 'From WAN to TRUSTED'
-# set firewall name wan-trusted enable-default-log
+set firewall name wan-trusted default-action 'drop'
+set firewall name wan-trusted description 'From WAN to TRUSTED'
+set firewall name wan-trusted enable-default-log
 #
 # # From WAN to VIDEO
-# set firewall name wan-video default-action 'drop'
-# set firewall name wan-video description 'From WAN to VIDEO'
-# set firewall name wan-video enable-default-log
+set firewall name wan-video default-action 'drop'
+set firewall name wan-video description 'From WAN to VIDEO'
+set firewall name wan-video enable-default-log
