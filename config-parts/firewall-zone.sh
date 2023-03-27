@@ -118,7 +118,7 @@ set firewall zone kids from services firewall name 'services-kids'
 set firewall zone kids from trusted firewall name 'trusted-kids'
 set firewall zone kids from video firewall name 'video-kids'
 set firewall zone kids from wan firewall name 'wan-kids'
-set firewall zone kids from kids firewall name 'kids-kids'
+set firewall zone kids from lan firewall name 'lan-kids'
 set firewall zone kids interface 'eth1.40'
 
 # WAN
