@@ -108,6 +108,19 @@ set firewall zone video from kids firewall name 'kids-video'
 set firewall zone video interface 'eth1.50'
 set firewall zone wan default-action 'drop'
 
+# KIDS
+set firewall zone lan default-action 'drop'
+set firewall zone lan from guest firewall name 'guest-kids'
+set firewall zone lan from iot firewall name 'iot-kids'
+set firewall zone lan from local firewall name 'local-kids'
+set firewall zone lan from servers firewall name 'servers-kids'
+set firewall zone lan from services firewall name 'services-kids'
+set firewall zone lan from trusted firewall name 'trusted-kids'
+set firewall zone lan from video firewall name 'video-kids'
+set firewall zone lan from wan firewall name 'wan-kids'
+set firewall zone lan from kids firewall name 'kids-kids'
+set firewall zone lan interface 'eth1.40'
+
 # WAN
 set firewall zone wan from guest firewall name 'guest-wan'
 set firewall zone wan from iot firewall name 'iot-wan'
