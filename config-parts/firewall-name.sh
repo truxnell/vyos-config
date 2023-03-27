@@ -16,9 +16,9 @@ set firewall name kids-trusted description 'From KIDS to TRUSTED'
 set firewall name kids-trusted enable-default-log
 
 # From KIDS to SERVERS
-set firewall name kids-trusted default-action 'accept'
-set firewall name kids-trusted description 'From KIDS to SERVERS'
-set firewall name kids-trusted enable-default-log
+set firewall name kids-servers default-action 'accept'
+set firewall name kids-servers description 'From KIDS to SERVERS'
+set firewall name kids-servers enable-default-log
 
 # From KIDS to SERVICES
 set firewall name kids-services default-action 'accept'
