@@ -392,7 +392,7 @@ set firewall name video-trusted description 'From VIDEO to TRUSTED'
 set firewall name video-trusted enable-default-log
 
 # From VIDEO to KIDS
-set firewall name video-kids default-action 'deny'
+set firewall name video-kids default-action 'drop'
 set firewall name video-kids description 'From VIDEO to KIDS'
 set firewall name video-kids enable-default-log
 
