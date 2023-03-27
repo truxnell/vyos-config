@@ -16,6 +16,8 @@ set interfaces ethernet eth1 vif 40 address '10.8.40.1/24'
 set interfaces ethernet eth1 vif 40 description 'KIDS'
 set interfaces ethernet eth1 vif 50 address '10.8.50.1/24'
 set interfaces ethernet eth1 vif 50 description 'VIDEO'
+set interfaces ethernet eth1 vif 60 address '10.8.60.1/24'
+set interfaces ethernet eth1 vif 60 description 'GUEST'
 set interfaces ethernet eth1 hw-id '7c:2b:e1:13:f7:7a'
 
 set interfaces ethernet eth2 hw-id '7c:2b:e1:13:f7:7b'
