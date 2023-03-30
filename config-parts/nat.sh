@@ -23,6 +23,13 @@ set nat destination rule 110 protocol 'tcp_udp'
 set nat destination rule 110 translation address '10.8.20.230'
 set nat destination rule 110 translation port '34203'
 
+set nat destination rule 110 description 'Factorio - Squareworld'
+set nat destination rule 110 destination port '34204'
+set nat destination rule 110 inbound-interface 'eth0'
+set nat destination rule 110 protocol 'tcp_udp'
+set nat destination rule 110 translation address '10.8.20.230'
+set nat destination rule 110 translation port '34204'
+
 # Force DNS
 set nat destination rule 102 description 'Force DNS for IoT'
 set nat destination rule 102 destination address '!10.5.0.4'
