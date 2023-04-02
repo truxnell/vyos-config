@@ -5,6 +5,7 @@ set system static-host-mapping host-name gateway.natallan.com alias ipv4.trux.de
 
 # Unifi controller
 set system static-host-mapping host-name unifi inet 10.5.0.10
+set system static-host-mapping host-name unifi.natallan.com inet 10.5.0.10
 
 # NAS
 set system static-host-mapping host-name george.natallan.com inet 10.8.20.11
