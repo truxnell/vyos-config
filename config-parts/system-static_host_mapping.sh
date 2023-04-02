@@ -27,6 +27,8 @@ set system static-host-mapping host-name mqtt.trux.dev inet 10.8.20.222
 
 # NAS ingress
 set system static-host-mapping host-name syncthing.trux.dev inet 10.8.20.11
+set system static-host-mapping host-name minio.trux.dev inet 10.8.20.11
+set system static-host-mapping host-name s3.trux.dev inet 10.8.20.11
 
 # Other hosts
 set system static-host-mapping host-name technocore.natallan.com inet 10.8.20.60
