@@ -49,3 +49,21 @@ scp age key to folder
 ```bash
 scp ~/.config/sops/age/keys.txt vyos@<ip>:/config/secrets/age.txt
 ```
+
+# Wireguard
+
+First create servers wg keypair
+
+```
+generate pki wireguard key-pair install <interface>
+```
+
+from the output, put the public key in the sops file (to gitops the vyos interface private key) and note the public key for your remote device
+
+generate a keypair for your remote device
+
+```
+generate pki wireguard key-pair
+```
+
+Note them for remote device. Add the private key into the wg01 in interfaces.sh

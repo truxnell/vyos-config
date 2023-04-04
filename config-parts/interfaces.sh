@@ -26,7 +26,7 @@ set interfaces ethernet eth3 hw-id '7c:2b:e1:13:f7:7c'
 set interfaces wireguard wg01 address '10.8.11.1/24'
 set interfaces wireguard wg01 description 'WIREGUARD'
 set interfaces wireguard wg01 peer nat-mobile allowed-ips '10.8.11.4/32'
-set interfaces wireguard wg01 peer nat-mobile public-key 'M/nYbdmFNB76htj/sMtRt4vteyPxmSp8RXuTLGjW7Xs='
+set interfaces wireguard wg01 peer nat-mobile public-key 'JoMaWfg9uEMcdtGL3AKkshV1gH6HgRbzhAlYJGAuOQo='
 set interfaces wireguard wg01 peer nat-mobile persistent-keepalive '15'
 set interfaces wireguard wg01 port '51820'
 set interfaces wireguard wg01 private-key "${SECRET_WIREGUARD_PRIVATE_KEY}"
