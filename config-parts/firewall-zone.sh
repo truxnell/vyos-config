@@ -92,7 +92,7 @@ set firewall zone trusted from video firewall name 'video-trusted'
 set firewall zone trusted from wan firewall name 'wan-trusted'
 set firewall zone trusted from kids firewall name 'kids-trusted'
 set firewall zone trusted interface 'eth1.10'
-# set firewall zone trusted interface 'wg01'
+set firewall zone trusted interface 'wg01'
 
 # VIDEO
 set firewall zone video default-action 'drop'
