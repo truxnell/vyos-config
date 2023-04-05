@@ -4,7 +4,7 @@ set interfaces ethernet eth0 address 'dhcp'
 set interfaces ethernet eth0 description 'WAN'
 set interfaces ethernet eth0 hw-id '7c:2b:e1:13:f7:79'
 
-set interfaces ethernet eth1 address '10.8.10.1/24'
+set interfaces ethernet eth1 address '10.8.0.1/24'
 set interfaces ethernet eth1 description 'LAN'
 set interfaces ethernet eth1 vif 10 address '10.8.10.1/24'
 set interfaces ethernet eth1 vif 10 description 'TRUSTED'
