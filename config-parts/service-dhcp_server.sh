@@ -16,12 +16,12 @@ set service dhcp-server shared-network-name LAN subnet 10.8.10.0/24 range 0 stop
 # Trusted VLAN
 set service dhcp-server shared-network-name TRUSTED authoritative
 set service dhcp-server shared-network-name TRUSTED ping-check
-set service dhcp-server shared-network-name TRUSTED subnet 10.8.11.0/24 default-router '10.8.10.1'
+set service dhcp-server shared-network-name TRUSTED subnet 10.8.11.0/24 default-router '10.8.11.1'
 set service dhcp-server shared-network-name TRUSTED subnet 10.8.11.0/24 domain-name 'natallan.com'
 set service dhcp-server shared-network-name TRUSTED subnet 10.8.11.0/24 lease '86400'
 set service dhcp-server shared-network-name TRUSTED subnet 10.8.11.0/24 name-server '10.5.0.4'
-set service dhcp-server shared-network-name TRUSTED subnet 10.8.11.0/24 range 0 start '10.8.10.200'
-set service dhcp-server shared-network-name TRUSTED subnet 10.8.11.0/24 range 0 stop '10.8.10.254'
+set service dhcp-server shared-network-name TRUSTED subnet 10.8.11.0/24 range 0 start '10.8.11.200'
+set service dhcp-server shared-network-name TRUSTED subnet 10.8.11.0/24 range 0 stop '10.8.11.254'
 
 # Servers VLAN
 set service dhcp-server shared-network-name SERVERS authoritative
