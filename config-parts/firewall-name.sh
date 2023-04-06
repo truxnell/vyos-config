@@ -1,34 +1,49 @@
 #!/bin/vbash
 
 # From KIDS to LAN
-set firewall name kids-lan default-action 'accept'
+set firewall name kids-lan default-action 'drop'
 set firewall name kids-lan description 'From KIDS to LAN'
 set firewall name kids-lan enable-default-log
 
 # From KIDS to IOT
-set firewall name kids-iot default-action 'accept'
+set firewall name kids-iot default-action 'drop'
 set firewall name kids-iot description 'From KIDS to IOT'
 set firewall name kids-iot enable-default-log
 
 # From KIDS to LOCAL
 set firewall name kids-local default-action 'accept'
-set firewall name kids-local description 'From KIDS to LAN'
+set firewall name kids-local description 'From KIDS to LOCAL'
 set firewall name kids-local enable-default-log
+set firewall name kids-local rule 1 action 'accept'
+set firewall name kids-local rule 1 description 'Rule: accept_dhcp'
+set firewall name kids-local rule 1 destination port '67,68'
+set firewall name kids-local rule 1 protocol 'udp'
+set firewall name kids-local rule 1 source port '67,68'
 
 # From KIDS to TRUSTED
-set firewall name kids-trusted default-action 'accept'
+set firewall name kids-trusted default-action 'drop'
 set firewall name kids-trusted description 'From KIDS to TRUSTED'
 set firewall name kids-trusted enable-default-log
 
 # From KIDS to SERVERS
-set firewall name kids-servers default-action 'accept'
+set firewall name kids-servers default-action 'drop'
 set firewall name kids-servers description 'From KIDS to SERVERS'
 set firewall name kids-servers enable-default-log
+set firewall name iot-servers rule 1 action 'accept'
+set firewall name iot-servers rule 1 description 'Rule: accept_plex_from_plex_clients'
+set firewall name iot-servers rule 1 destination group address-group 'k8s_plex'
+set firewall name iot-servers rule 1 destination port '32400'
+set firewall name iot-servers rule 1 protocol 'tcp'
+set firewall name iot-servers rule 1 source group address-group 'plex_clients'
 
 # From KIDS to SERVICES
-set firewall name kids-services default-action 'accept'
+set firewall name kids-services default-action 'drop'
 set firewall name kids-services description 'From KIDS to SERVICES'
 set firewall name kids-services enable-default-log
+set firewall name guest-services rule 1 action 'accept'
+set firewall name guest-services rule 1 description 'Rule: accept_dns'
+set firewall name guest-services rule 1 destination port 'domain,domain-s'
+set firewall name guest-services rule 1 protocol 'tcp_udp'
 
 # From KIDS to VIDEO
 set firewall name kids-video default-action 'drop'
@@ -59,11 +74,20 @@ set firewall name guest-lan enable-default-log
 set firewall name guest-local default-action 'drop'
 set firewall name guest-local description 'From GUEST to LOCAL'
 set firewall name guest-local enable-default-log
+set firewall name guest-local rule 1 action 'accept'
+set firewall name guest-local rule 1 description 'Rule: accept_dhcp'
+set firewall name guest-local rule 1 destination port '67,68'
+set firewall name guest-local rule 1 protocol 'udp'
+set firewall name guest-local rule 1 source port '67,68'
 
 # From GUEST to SERVERS
 set firewall name guest-servers default-action 'drop'
 set firewall name guest-servers description 'From GUEST to SERVERS'
 set firewall name guest-servers enable-default-log
+set firewall name guest-services rule 1 action 'accept'
+set firewall name guest-services rule 1 description 'Rule: accept_dns'
+set firewall name guest-services rule 1 destination port 'domain,domain-s'
+set firewall name guest-services rule 1 protocol 'tcp_udp'
 
 # From GUEST to SERVICES
 set firewall name guest-services default-action 'drop'
@@ -103,6 +127,24 @@ set firewall name iot-lan enable-default-log
 set firewall name iot-local default-action 'accept'
 set firewall name iot-local description 'From IOT to LOCAL'
 set firewall name iot-local enable-default-log
+set firewall name iot-local rule 2 action 'accept'
+set firewall name iot-local rule 2 description 'Rule: accept_ntp'
+set firewall name iot-local rule 2 destination port 'ntp'
+set firewall name iot-local rule 2 protocol 'udp'
+set firewall name iot-local rule 3 action 'accept'
+set firewall name iot-local rule 3 description 'Rule: accept_dhcp'
+set firewall name iot-local rule 3 destination port '67,68'
+set firewall name iot-local rule 3 protocol 'udp'
+set firewall name iot-local rule 3 source port '67,68'
+set firewall name iot-local rule 4 action 'accept'
+set firewall name iot-local rule 4 description 'Rule: accept_igmp'
+set firewall name iot-local rule 4 protocol '2'
+set firewall name iot-local rule 5 action 'accept'
+set firewall name iot-local rule 5 description 'Rule: accept_mdns'
+set firewall name iot-local rule 5 destination port 'mdns'
+set firewall name iot-local rule 5 protocol 'udp'
+set firewall name iot-local rule 5 source port 'mdns'
+set firewall name iot-local rule 6 action 'accept'
 
 # From IOT to SERVERS
 set firewall name iot-servers default-action 'accept'
@@ -210,7 +252,7 @@ set firewall name local-video description 'From LOCAL to VIDEO'
 set firewall name local-video enable-default-log
 
 # From LOCAL to KIDS
-set firewall name local-kids default-action 'accept'
+set firewall name local-kids default-action 'drop'
 set firewall name local-kids description 'From LOCAL to KIDS'
 set firewall name local-kids enable-default-log
 
@@ -236,6 +278,36 @@ set firewall name servers-lan description 'From SERVERS to LAN'
 set firewall name servers-local default-action 'accept'
 set firewall name servers-local description 'From SERVERS to LOCAL'
 set firewall name servers-local enable-default-log
+set firewall name servers-local rule 1 action 'accept'
+set firewall name servers-local rule 1 description 'Rule: accept_icmp'
+set firewall name servers-local rule 1 protocol 'icmp'
+set firewall name servers-local rule 2 action 'accept'
+set firewall name servers-local rule 2 description 'Rule: accept_ntp'
+set firewall name servers-local rule 2 destination port 'ntp'
+set firewall name servers-local rule 2 protocol 'udp'
+set firewall name servers-local rule 3 action 'accept'
+set firewall name servers-local rule 3 description 'Rule: accept_dhcp'
+set firewall name servers-local rule 3 destination port '67,68'
+set firewall name servers-local rule 3 protocol 'udp'
+set firewall name servers-local rule 3 source port '67,68'
+set firewall name servers-local rule 4 action 'accept'
+set firewall name servers-local rule 4 description 'Rule: accept_bgp'
+set firewall name servers-local rule 4 destination port 'bgp'
+set firewall name servers-local rule 4 protocol 'tcp'
+set firewall name servers-local rule 5 action 'accept'
+set firewall name servers-local rule 5 description 'Rule: accept_tftp'
+set firewall name servers-local rule 5 destination port '69'
+set firewall name servers-local rule 5 protocol 'udp'
+set firewall name servers-local rule 6 action 'accept'
+set firewall name servers-local rule 6 description 'Rule: accept_node_exporter_from_k8s_nodes'
+set firewall name servers-local rule 6 destination port '9100'
+set firewall name servers-local rule 6 protocol 'tcp'
+set firewall name servers-local rule 6 source group address-group 'k8s_nodes'
+set firewall name servers-local rule 7 action 'accept'
+set firewall name servers-local rule 7 description 'Rule: accept_speedtest_exporter_from_k8s_nodes'
+set firewall name servers-local rule 7 destination port '9798'
+set firewall name servers-local rule 7 protocol 'tcp'
+set firewall name servers-local rule 7 source group address-group 'k8s_nodes'
 
 # From SERVERS to SERVICES
 set firewall name servers-services default-action 'accept'
@@ -259,7 +331,7 @@ set firewall name servers-video rule 2 protocol 'tcp'
 set firewall name servers-video rule 2 source group address-group 'k8s_nodes'
 
 # From SERVERS to KIDS
-set firewall name servers-kids default-action 'accept'
+set firewall name servers-kids default-action 'drop'
 set firewall name servers-kids description 'From SERVER to KIDS'
 set firewall name servers-kids enable-default-log
 
@@ -286,6 +358,15 @@ set firewall name services-lan enable-default-log
 set firewall name services-local default-action 'accept'
 set firewall name services-local description 'From SERVICES to LOCAL'
 set firewall name services-local enable-default-log
+set firewall name services-local rule 1 action 'accept'
+set firewall name services-local rule 1 description 'Rule: accept_ntp'
+set firewall name services-local rule 1 destination port 'ntp'
+set firewall name services-local rule 1 protocol 'udp'
+set firewall name services-local rule 2 action 'accept'
+set firewall name services-local rule 2 description 'Rule: accept_dhcp'
+set firewall name services-local rule 2 destination port '67,68'
+set firewall name services-local rule 2 protocol 'udp'
+set firewall name services-local rule 2 source port '67,68'
 
 # From SERVICES to SERVERS
 set firewall name services-servers default-action 'accept'
@@ -302,7 +383,7 @@ set firewall name services-video description 'From SERVICES to VIDEO'
 set firewall name services-video enable-default-log
 
 # From SERVICES to KIDS
-set firewall name services-kids default-action 'accept'
+set firewall name services-kids default-action 'drop'
 set firewall name services-kids description 'From SERVICES to KIDS'
 set firewall name services-kids enable-default-log
 
@@ -341,7 +422,7 @@ set firewall name trusted-video default-action 'accept'
 set firewall name trusted-video description 'From TRUSTED to VIDEO'
 
 # From TRUSTED to KIDS
-set firewall name trusted-kids default-action 'accept'
+set firewall name trusted-kids default-action 'drop'
 set firewall name trusted-kids description 'From TRUSTED to KIDS'
 set firewall name trusted-kids enable-default-log
 
