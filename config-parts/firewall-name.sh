@@ -84,10 +84,10 @@ set firewall name guest-local rule 1 source port '67,68'
 set firewall name guest-servers default-action 'drop'
 set firewall name guest-servers description 'From GUEST to SERVERS'
 set firewall name guest-servers enable-default-log
-set firewall name guest-services rule 1 action 'accept'
-set firewall name guest-services rule 1 description 'Rule: accept_dns'
-set firewall name guest-services rule 1 destination port 'domain,domain-s'
-set firewall name guest-services rule 1 protocol 'tcp_udp'
+set firewall name guest-servers rule 1 action 'accept'
+set firewall name guest-servers rule 1 description 'Rule: accept_dns'
+set firewall name guest-servers rule 1 destination port 'domain,domain-s'
+set firewall name guest-servers rule 1 protocol 'tcp_udp'
 
 # From GUEST to SERVICES
 set firewall name guest-services default-action 'drop'
