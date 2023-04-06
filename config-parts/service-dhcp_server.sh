@@ -112,8 +112,8 @@ set service dhcp-server shared-network-name VIDEO subnet 10.8.50.0/24 range 0 st
 # Guest VLAN
 set service dhcp-server shared-network-name GUEST authoritative
 set service dhcp-server shared-network-name GUEST ping-check
-set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 default-router '10.8.60.1'
-set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 lease '86400'
-set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 name-server '10.5.0.4'
-set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 range 0 start '10.8.60.200'
-set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 range 0 stop '10.8.60.254'
+set service dhcp-server shared-network-name GUEST subnet 10.8.60.0/24 default-router '10.8.60.1'
+set service dhcp-server shared-network-name GUEST subnet 10.8.60.0/24 lease '86400'
+set service dhcp-server shared-network-name GUEST subnet 10.8.60.0/24 name-server '10.5.0.4'
+set service dhcp-server shared-network-name GUEST subnet 10.8.60.0/24 range 0 start '10.8.60.200'
+set service dhcp-server shared-network-name GUEST subnet 10.8.60.0/24 range 0 stop '10.8.60.254'
