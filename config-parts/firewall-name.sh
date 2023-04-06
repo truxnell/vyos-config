@@ -40,10 +40,10 @@ set firewall name iot-servers rule 1 source group address-group 'plex_clients'
 set firewall name kids-services default-action 'drop'
 set firewall name kids-services description 'From KIDS to SERVICES'
 set firewall name kids-services enable-default-log
-set firewall name guest-services rule 1 action 'accept'
-set firewall name guest-services rule 1 description 'Rule: accept_dns'
-set firewall name guest-services rule 1 destination port 'domain,domain-s'
-set firewall name guest-services rule 1 protocol 'tcp_udp'
+set firewall name kids-services rule 1 action 'accept'
+set firewall name kids-services rule 1 description 'Rule: accept_dns'
+set firewall name kids-services rule 1 destination port 'domain,domain-s'
+set firewall name kids-services rule 1 protocol 'tcp_udp'
 
 # From KIDS to VIDEO
 set firewall name kids-video default-action 'drop'
