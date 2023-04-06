@@ -30,3 +30,7 @@ set firewall group network-group cloudflare-ipv4 network '172.64.0.0/13'
 set firewall group network-group cloudflare-ipv4 network '131.0.72.0/22'
 
 set firewall group address-group k8s_plex address '10.8.20.213'
+
+set firewall group address-group plex_clients address '10.8.40.1'
+set firewall group address-group plex_clients address '10.8.40.2'
+set firewall group address-group plex_clients address '10.8.40.3'
