@@ -29,12 +29,12 @@ set firewall name kids-trusted enable-default-log
 set firewall name kids-servers default-action 'drop'
 set firewall name kids-servers description 'From KIDS to SERVERS'
 set firewall name kids-servers enable-default-log
-set firewall name iot-servers rule 1 action 'accept'
-set firewall name iot-servers rule 1 description 'Rule: accept_plex_from_plex_clients'
-set firewall name iot-servers rule 1 destination group address-group 'k8s_plex'
-set firewall name iot-servers rule 1 destination port '32400'
-set firewall name iot-servers rule 1 protocol 'tcp'
-set firewall name iot-servers rule 1 source group address-group 'plex_clients'
+set firewall name kids-servers rule 1 action 'accept'
+set firewall name kids-servers rule 1 description 'Rule: accept_plex_from_plex_clients'
+set firewall name kids-servers rule 1 destination group address-group 'k8s_plex'
+set firewall name kids-servers rule 1 destination port '32400'
+set firewall name kids-servers rule 1 protocol 'tcp'
+set firewall name kids-servers rule 1 source group address-group 'plex_clients'
 
 # From KIDS to SERVICES
 set firewall name kids-services default-action 'drop'
@@ -84,15 +84,15 @@ set firewall name guest-local rule 1 source port '67,68'
 set firewall name guest-servers default-action 'drop'
 set firewall name guest-servers description 'From GUEST to SERVERS'
 set firewall name guest-servers enable-default-log
-set firewall name guest-servers rule 1 action 'accept'
-set firewall name guest-servers rule 1 description 'Rule: accept_dns'
-set firewall name guest-servers rule 1 destination port 'domain,domain-s'
-set firewall name guest-servers rule 1 protocol 'tcp_udp'
 
 # From GUEST to SERVICES
 set firewall name guest-services default-action 'drop'
 set firewall name guest-services description 'From GUEST to SERVICES'
 set firewall name guest-services enable-default-log
+set firewall name guest-services rule 1 action 'accept'
+set firewall name guest-services rule 1 description 'Rule: accept_dns'
+set firewall name guest-services rule 1 destination port 'domain,domain-s'
+set firewall name guest-services rule 1 protocol 'tcp_udp'
 
 # From GUEST to TRUSTED
 set firewall name guest-trusted default-action 'drop'

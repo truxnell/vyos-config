@@ -56,7 +56,7 @@ set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 range 0 stop
 
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping tv-livingroom ip-address '10.8.30.10'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping tv-livingroom mac-address '14:c9:13:01:34:5a'
-set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping tv-bedroom ip-address '10.8.30.90'
+set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping tv-bedroom ip-address '10.8.30.11'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping tv-bedroom mac-address '80:47:86:70:24:de'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping echo-livingroom ip-address '10.8.30.20'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping echo-livingroom mac-address 'd8:be:65:b9:94:cd'
@@ -112,8 +112,8 @@ set service dhcp-server shared-network-name VIDEO subnet 10.8.50.0/24 range 0 st
 # Guest VLAN
 set service dhcp-server shared-network-name GUEST authoritative
 set service dhcp-server shared-network-name GUEST ping-check
-set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 default-router '192.168.2.1'
+set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 default-router '10.8.60.1'
 set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 lease '86400'
 set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 name-server '10.5.0.4'
-set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 range 0 start '192.168.2.200'
-set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 range 0 stop '192.168.2.254'
+set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 range 0 start '10.8.60.200'
+set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 range 0 stop '10.8.60.254'
