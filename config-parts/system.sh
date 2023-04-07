@@ -17,8 +17,6 @@ set system syslog host 10.8.20.220 facility kern protocol 'tcp'
 set system syslog host 10.8.20.220 port '6002'
 
 set system task-scheduler task uptime-kuma-ping crontab-spec '* * * * *'
-set system task-scheduler task uptime-kuma-ping executable path '/config/scripts/uptime-kuma-ping.sh M47JRLRJ7r'
-set system task-scheduler task uptime-kuma-ping1 crontab-spec '* * * * *'
-set system task-scheduler task uptime-kuma-ping1 executable path 'sleep 30 && /config/scripts/uptime-kuma-ping.sh M47JRLRJ7r'
+set system task-scheduler task uptime-kuma-ping executable path '/config/scripts/uptime-kuma-ping.sh'
 
 set system time-zone 'Australia/Melbourne'
