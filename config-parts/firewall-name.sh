@@ -11,7 +11,7 @@ set firewall name kids-iot description 'From KIDS to IOT'
 set firewall name kids-iot enable-default-log
 
 # From KIDS to LOCAL
-set firewall name kids-local default-action 'accept'
+set firewall name kids-local default-action 'drop'
 set firewall name kids-local description 'From KIDS to LOCAL'
 set firewall name kids-local enable-default-log
 set firewall name kids-local rule 1 action 'accept'
@@ -57,8 +57,7 @@ set firewall name kids-guest enable-default-log
 
 # From KIDS to WAN
 set firewall name kids-wan default-action 'accept'
-set firewall name kids-wan description 'From KIDS to GUEST'
-set firewall name kids-wan enable-default-log
+set firewall name kids-wan description 'From KIDS to WAN'
 
 # From GUEST to IOT
 set firewall name guest-iot default-action 'drop'
