@@ -213,7 +213,7 @@ set firewall name iot-services default-action 'accept'
 set firewall name iot-services description 'From IOT to SERVICES'
 
 # From IOT to TRUSTED
-set firewall name iot-trusted default-action 'accept'
+set firewall name iot-trusted default-action 'drop'
 set firewall name iot-trusted description 'From IOT to TRUSTED'
 set firewall name iot-trusted enable-default-log
 
