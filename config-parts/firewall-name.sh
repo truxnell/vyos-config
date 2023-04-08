@@ -19,6 +19,10 @@ set firewall name kids-local rule 1 description 'Rule: accept_dhcp'
 set firewall name kids-local rule 1 destination port '67,68'
 set firewall name kids-local rule 1 protocol 'udp'
 set firewall name kids-local rule 1 source port '67,68'
+set firewall name kids-local rule 2 action 'accept'
+set firewall name kids-local rule 2 description 'Rule: accept_ntp'
+set firewall name kids-local rule 2 destination port 'ntp'
+set firewall name kids-local rule 2 protocol 'udp'
 
 # From KIDS to TRUSTED
 set firewall name kids-trusted default-action 'drop'
@@ -504,7 +508,7 @@ set firewall name trusted-services default-action 'accept'
 set firewall name trusted-services description 'From TRUSTED to SERVICES'
 
 # From TRUSTED to VIDEO
-set firewall name trusted-video default-action 'accept'
+set firewall name trusted-video default-action 'drop'
 set firewall name trusted-video description 'From TRUSTED to VIDEO'
 
 # From TRUSTED to KIDS
