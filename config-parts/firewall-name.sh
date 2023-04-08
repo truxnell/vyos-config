@@ -216,6 +216,18 @@ set firewall name iot-services description 'From IOT to SERVICES'
 set firewall name iot-trusted default-action 'drop'
 set firewall name iot-trusted description 'From IOT to TRUSTED'
 set firewall name iot-trusted enable-default-log
+set firewall name iot-trusted rule 1 action 'accept'
+set firewall name iot-trusted rule 1 description 'Rule: accept_echo_to_trusted'
+set firewall name iot-trusted rule 1 destination port '60000'
+set firewall name iot-trusted rule 1 protocol 'udp'
+set firewall name iot-trusted rule 2 action 'accept'
+set firewall name iot-trusted rule 2 description 'Rule: accept_chromecast_to_trusted_tcp'
+set firewall name iot-trusted rule 2 destination port '8008,8009,8443'
+set firewall name iot-trusted rule 2 protocol 'tcp'
+set firewall name iot-trusted rule 2 action 'accept'
+set firewall name iot-trusted rule 2 description 'Rule: accept_chromecast_to_trusted_udp'
+set firewall name iot-trusted rule 2 destination port '32768-61000'
+set firewall name iot-trusted rule 2 protocol 'tcp'
 
 # From IOT to VIDEO
 set firewall name iot-video default-action 'drop'
@@ -515,12 +527,8 @@ set firewall name trusted-guest description 'From TRUSTED to GUEST'
 set firewall name trusted-guest enable-default-log
 
 # From TRUSTED to IOT
-set firewall name trusted-iot default-action 'drop'
-set firewall name trusted-iot enable-default-log
+set firewall name trusted-iot default-action 'accept'
 set firewall name trusted-iot description 'From TRUSTED to IOT'
-set firewall name trusted-iot rule 1 action 'accept'
-set firewall name trusted-iot rule 1 description 'Rule: accept_icmp'
-set firewall name trusted-iot rule 1 protocol 'icmp'
 
 # From TRUSTED to LAN
 set firewall name trusted-lan default-action 'accept'
