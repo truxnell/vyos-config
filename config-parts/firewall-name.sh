@@ -9,6 +9,11 @@ set firewall name kids-lan enable-default-log
 set firewall name kids-iot default-action 'drop'
 set firewall name kids-iot description 'From KIDS to IOT'
 set firewall name kids-iot enable-default-log
+set firewall name kids-iot rule 1 action 'accept'
+set firewall name kids-iot rule 1 description 'Rule: accept_mdns'
+set firewall name kids-iot rule 1 destination port '67,68'
+set firewall name kids-iot rule 1 protocol 'udp'
+set firewall name kids-iot rule 1 source port '67,68'
 
 # From KIDS to LOCAL
 set firewall name kids-local default-action 'drop'
@@ -498,9 +503,8 @@ set firewall name services-local rule 2 protocol 'udp'
 set firewall name services-local rule 2 source port '67,68'
 
 # From SERVICES to SERVERS
-set firewall name services-servers default-action 'drop'
+set firewall name services-servers default-action 'accept'
 set firewall name services-servers description 'From SERVICES to SERVERS'
-set firewall name services-servers enable-default-log
 
 # From SERVICES to TRUSTED
 set firewall name services-trusted default-action 'drop'
