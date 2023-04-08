@@ -124,7 +124,7 @@ set firewall name iot-guest description 'From IOT to GUEST'
 set firewall name iot-guest enable-default-log
 
 # From IOT to LAN
-set firewall name iot-lan default-action 'accept'
+set firewall name iot-lan default-action 'drop'
 set firewall name iot-lan description 'From IOT to LAN'
 set firewall name iot-lan enable-default-log
 
@@ -325,8 +325,12 @@ set firewall name servers-iot description 'From SERVERS to IOT'
 set firewall name servers-iot enable-default-log
 
 # From SERVERS to LAN
-set firewall name servers-lan default-action 'accept'
+set firewall name servers-lan default-action 'drop'
 set firewall name servers-lan description 'From SERVERS to LAN'
+set firewall name servers-iot enable-default-log
+set firewall name servers-lan rule 1 action 'accept'
+set firewall name servers-lan rule 1 description 'Rule: accept_icmp'
+set firewall name servers-lan rule 1 protocol 'icmp'
 
 # From SERVERS to LOCAL
 set firewall name servers-local default-action 'drop'
@@ -404,7 +408,7 @@ set firewall name services-iot description 'From SERVICES to IOT'
 set firewall name services-iot enable-default-log
 
 # From SERVICES to LAN
-set firewall name services-lan default-action 'accept'
+set firewall name services-lan default-action 'drop'
 set firewall name services-lan description 'From SERVICES to LAN'
 set firewall name services-lan enable-default-log
 
