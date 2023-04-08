@@ -462,7 +462,7 @@ set firewall name services-guest description 'From SERVICES to GUEST'
 set firewall name services-guest enable-default-log
 
 # From SERVICES to IOT
-set firewall name services-iot default-action 'accept'
+set firewall name services-iot default-action 'drop'
 set firewall name services-iot description 'From SERVICES to IOT'
 set firewall name services-iot enable-default-log
 
@@ -486,11 +486,12 @@ set firewall name services-local rule 2 protocol 'udp'
 set firewall name services-local rule 2 source port '67,68'
 
 # From SERVICES to SERVERS
-set firewall name services-servers default-action 'accept'
+set firewall name services-servers default-action 'drop'
 set firewall name services-servers description 'From SERVICES to SERVERS'
+set firewall name services-trusted enable-default-log
 
 # From SERVICES to TRUSTED
-set firewall name services-trusted default-action 'accept'
+set firewall name services-trusted default-action 'drop'
 set firewall name services-trusted description 'From SERVICES to TRUSTED'
 set firewall name services-trusted enable-default-log
 
@@ -514,8 +515,12 @@ set firewall name trusted-guest description 'From TRUSTED to GUEST'
 set firewall name trusted-guest enable-default-log
 
 # From TRUSTED to IOT
-set firewall name trusted-iot default-action 'accept'
+set firewall name trusted-iot default-action 'drop'
+set firewall name trusted-iot enable-default-log
 set firewall name trusted-iot description 'From TRUSTED to IOT'
+set firewall name trusted-iot rule 1 action 'accept'
+set firewall name trusted-iot rule 1 description 'Rule: accept_icmp'
+set firewall name trusted-iot rule 1 protocol 'icmp'
 
 # From TRUSTED to LAN
 set firewall name trusted-lan default-action 'accept'
