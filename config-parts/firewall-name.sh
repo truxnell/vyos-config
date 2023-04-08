@@ -35,6 +35,12 @@ set firewall name kids-servers rule 1 destination group address-group 'k8s_plex'
 set firewall name kids-servers rule 1 destination port '32400'
 set firewall name kids-servers rule 1 protocol 'tcp'
 set firewall name kids-servers rule 1 source group address-group 'plex_clients'
+set firewall name kids-servers rule 2 action 'accept'
+set firewall name kids-servers rule 2 description 'Rule: accept_k8s_ingress_from_plex_clients'
+set firewall name kids-servers rule 2 destination group address-group 'k8s_ingress'
+set firewall name kids-servers rule 2 destination port 'http,https'
+set firewall name kids-servers rule 2 protocol 'tcp'
+set firewall name kids-servers rule 2 source group address-group 'plex_clients'
 
 # From KIDS to SERVICES
 set firewall name kids-services default-action 'drop'
@@ -123,7 +129,7 @@ set firewall name iot-lan description 'From IOT to LAN'
 set firewall name iot-lan enable-default-log
 
 # From IOT to LOCAL
-set firewall name iot-local default-action 'accept'
+set firewall name iot-local default-action 'drop'
 set firewall name iot-local description 'From IOT to LOCAL'
 set firewall name iot-local enable-default-log
 set firewall name iot-local rule 2 action 'accept'
@@ -179,28 +185,47 @@ set firewall name lan-guest description 'From LAN to GUEST'
 set firewall name lan-guest enable-default-log
 
 # From LAN to IOT
-set firewall name lan-iot default-action 'accept'
+set firewall name lan-iot default-action 'drop'
 set firewall name lan-iot description 'From LAN to IOT'
 set firewall name lan-iot enable-default-log
 
 # From LAN to LOCAL
-set firewall name lan-local default-action 'accept'
+set firewall name lan-local default-action 'drop'
 set firewall name lan-local description 'From LAN to LOCAL'
 set firewall name lan-local enable-default-log
+set firewall name lan-local rule 1 action 'accept'
+set firewall name lan-local rule 1 description 'Rule: accept_ssh'
+set firewall name lan-local rule 1 destination port 'ssh'
+set firewall name lan-local rule 1 protocol 'tcp'
+set firewall name lan-local rule 2 action 'accept'
+set firewall name lan-local rule 2 description 'Rule: accept_ntp'
+set firewall name lan-local rule 2 destination port 'ntp'
+set firewall name lan-local rule 2 protocol 'udp'
+set firewall name lan-local rule 3 action 'accept'
+set firewall name lan-local rule 3 description 'Rule: accept_dhcp'
+set firewall name lan-local rule 3 destination port '67,68'
+set firewall name lan-local rule 3 protocol 'udp'
+set firewall name lan-local rule 3 source port '67,68'
 
 # From LAN to SERVERS
-set firewall name lan-servers default-action 'accept'
+set firewall name lan-servers default-action 'drop'
 set firewall name lan-servers description 'From LAN to SERVERS'
 set firewall name lan-servers enable-default-log
+set firewall name lan-servers rule 1 action 'accept'
+set firewall name lan-servers rule 1 description 'Rule: accept_icmp'
+set firewall name lan-servers rule 1 protocol 'icmp'
 
 # From LAN to SERVICES
 set firewall name lan-services default-action 'accept'
 set firewall name lan-services description 'From LAN to SERVICES'
 
 # From LAN to TRUSTED
-set firewall name lan-trusted default-action 'accept'
+set firewall name lan-trusted default-action 'drop'
 set firewall name lan-trusted description 'From LAN to TRUSTED'
 set firewall name lan-trusted enable-default-log
+set firewall name lan-trusted rule 1 action 'accept'
+set firewall name lan-trusted rule 1 description 'Rule: accept_icmp'
+set firewall name lan-trusted rule 1 protocol 'icmp'
 
 # From LAN to VIDEO
 set firewall name lan-video default-action 'drop'
@@ -222,28 +247,53 @@ set firewall name local-guest description 'From LOCAL to GUEST'
 set firewall name local-guest enable-default-log
 
 # From LOCAL to IOT
-set firewall name local-iot default-action 'accept'
+set firewall name local-iot default-action 'drop'
 set firewall name local-iot description 'From LOCAL to IOT'
 set firewall name local-iot enable-default-log
 
 # From LOCAL to LAN
-set firewall name local-lan default-action 'accept'
+set firewall name local-lan default-action 'drop'
 set firewall name local-lan description 'From LOCAL to LAN'
 set firewall name local-lan enable-default-log
 
 # From LOCAL to SERVERS
-set firewall name local-servers default-action 'accept'
+set firewall name local-servers default-action 'drop'
 set firewall name local-servers description 'From LOCAL to SERVERS'
 set firewall name local-servers enable-default-log
+set firewall name local-servers rule 1 action 'accept'
+set firewall name local-servers rule 1 description 'Rule: accept_bgp'
+set firewall name local-servers rule 1 destination port 'bgp'
+set firewall name local-servers rule 1 protocol 'tcp'
+set firewall name local-servers rule 2 action 'accept'
+set firewall name local-servers rule 2 description 'Rule: accept_k8s_api'
+set firewall name local-servers rule 2 destination port '6443'
+set firewall name local-servers rule 2 protocol 'tcp'
+set firewall name local-servers rule 3 action 'accept'
+set firewall name local-servers rule 3 description 'Rule: accept_dns'
+set firewall name local-servers rule 3 destination port 'domain,domain-s'
+set firewall name local-servers rule 3 protocol 'tcp_udp'
+set firewall name local-servers rule 4 action 'accept'
+set firewall name local-servers rule 4 description 'Rule: accept_vector_syslog'
+set firewall name local-servers rule 4 destination group address-group 'k8s_vector_aggregator'
+set firewall name local-servers rule 4 destination port '6001'
+set firewall name local-servers rule 4 protocol 'tcp'
 
 # From LOCAL to SERVICES
 set firewall name local-services default-action 'accept'
 set firewall name local-services description 'From LOCAL to SERVICES'
 
 # From LOCAL to TRUSTED
-set firewall name local-trusted default-action 'accept'
+set firewall name local-trusted default-action 'drop'
 set firewall name local-trusted description 'From LOCAL to TRUSTED'
 set firewall name local-trusted enable-default-log
+set firewall name local-trusted rule 1 action 'accept'
+set firewall name local-trusted rule 1 description 'Rule: accept_igmp'
+set firewall name local-trusted rule 1 protocol '2'
+set firewall name local-trusted rule 2 action 'accept'
+set firewall name local-trusted rule 2 description 'Rule: accept_mdns'
+set firewall name local-trusted rule 2 destination port 'mdns'
+set firewall name local-trusted rule 2 protocol 'udp'
+set firewall name local-trusted rule 2 source port 'mdns'
 
 # From LOCAL to VIDEO
 set firewall name local-video default-action 'drop'
@@ -254,6 +304,11 @@ set firewall name local-video enable-default-log
 set firewall name local-kids default-action 'drop'
 set firewall name local-kids description 'From LOCAL to KIDS'
 set firewall name local-kids enable-default-log
+set firewall name local-trusted rule 1 action 'accept'
+set firewall name local-trusted rule 1 description 'Rule: accept_mdns'
+set firewall name local-trusted rule 1 destination port 'mdns'
+set firewall name local-trusted rule 1 protocol 'udp'
+set firewall name local-trusted rule 1 source port 'mdns'
 
 # From LOCAL to WAN
 set firewall name local-wan default-action 'accept'
@@ -274,7 +329,7 @@ set firewall name servers-lan default-action 'accept'
 set firewall name servers-lan description 'From SERVERS to LAN'
 
 # From SERVERS to LOCAL
-set firewall name servers-local default-action 'accept'
+set firewall name servers-local default-action 'drop'
 set firewall name servers-local description 'From SERVERS to LOCAL'
 set firewall name servers-local enable-default-log
 set firewall name servers-local rule 1 action 'accept'
@@ -354,7 +409,7 @@ set firewall name services-lan description 'From SERVICES to LAN'
 set firewall name services-lan enable-default-log
 
 # From SERVICES to LOCAL
-set firewall name services-local default-action 'accept'
+set firewall name services-local default-action 'drop'
 set firewall name services-local description 'From SERVICES to LOCAL'
 set firewall name services-local enable-default-log
 set firewall name services-local rule 1 action 'accept'
@@ -404,9 +459,37 @@ set firewall name trusted-lan default-action 'accept'
 set firewall name trusted-lan description 'From TRUSTED to LAN'
 
 # From TRUSTED to LOCAL
-set firewall name trusted-local default-action 'accept'
+set firewall name trusted-local default-action 'drop'
 set firewall name trusted-local description 'From TRUSTED to LOCAL'
 set firewall name trusted-local enable-default-log
+set firewall name trusted-local rule 1 action 'accept'
+set firewall name trusted-local rule 1 description 'Rule: accept_icmp'
+set firewall name trusted-local rule 1 protocol 'icmp'
+set firewall name trusted-local rule 2 action 'accept'
+set firewall name trusted-local rule 2 description 'Rule: accept_ssh'
+set firewall name trusted-local rule 2 destination port 'ssh'
+set firewall name trusted-local rule 2 protocol 'tcp'
+set firewall name trusted-local rule 3 action 'accept'
+set firewall name trusted-local rule 3 description 'Rule: accept_ntp'
+set firewall name trusted-local rule 3 destination port 'ntp'
+set firewall name trusted-local rule 3 protocol 'udp'
+set firewall name trusted-local rule 4 action 'accept'
+set firewall name trusted-local rule 4 description 'Rule: accept_dhcp'
+set firewall name trusted-local rule 4 destination port '67,68'
+set firewall name trusted-local rule 4 protocol 'udp'
+set firewall name trusted-local rule 4 source port '67,68'
+set firewall name trusted-local rule 5 action 'accept'
+set firewall name trusted-local rule 5 description 'Rule: accept_igmp'
+set firewall name trusted-local rule 5 protocol '2'
+set firewall name trusted-local rule 6 action 'accept'
+set firewall name trusted-local rule 6 description 'Rule: accept_mdns'
+set firewall name trusted-local rule 6 destination port 'mdns'
+set firewall name trusted-local rule 6 protocol 'udp'
+set firewall name trusted-local rule 6 source port 'mdns'
+set firewall name trusted-local rule 7 action 'accept'
+set firewall name trusted-local rule 7 description 'Rule: accept_vyos_api'
+set firewall name trusted-local rule 7 destination port '8443'
+set firewall name trusted-local rule 7 protocol 'tcp'
 
 # From TRUSTED to SERVERS
 set firewall name trusted-servers default-action 'accept'
