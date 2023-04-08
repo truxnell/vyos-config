@@ -223,7 +223,7 @@ set firewall name iot-trusted rule 1 protocol 'udp'
 set firewall name iot-trusted rule 2 action 'accept'
 set firewall name iot-trusted rule 2 description 'Rule: accept_chromecast_to_trusted_tcp'
 set firewall name iot-trusted rule 2 destination port '8008,8009,8443'
-set firewall name iot-trusted rule 3 protocol 'tcp'
+set firewall name iot-trusted rule 2 protocol 'tcp'
 set firewall name iot-trusted rule 3 action 'accept'
 set firewall name iot-trusted rule 3 description 'Rule: accept_chromecast_to_trusted_udp'
 set firewall name iot-trusted rule 3 destination port '32768-61000'
@@ -500,7 +500,7 @@ set firewall name services-local rule 2 source port '67,68'
 # From SERVICES to SERVERS
 set firewall name services-servers default-action 'drop'
 set firewall name services-servers description 'From SERVICES to SERVERS'
-set firewall name services-trusted enable-default-log
+set firewall name services-servers enable-default-log
 
 # From SERVICES to TRUSTED
 set firewall name services-trusted default-action 'drop'
