@@ -13,10 +13,16 @@ To install from live image, `install image` and follow prompts.
 
 Get basic network running in installed image
 
+Some good info here on setup/config concepts:
+
+> https://blog.kroy.io/2020/05/04/vyos-from-scratch-edition-1/#Basic_Configuration
+
+Use `commit-confirm` when doing things that might lock you out - this reboots in 10 mins by defualt if you dont enter `confirm` into the configure mode. As you haven't saved it, when it reboots it will pick up your last known working config.
+
 ## Vyos
 
 ```
-confiure
+configure
 
 set networks ethernet eth1 dhcp
 
