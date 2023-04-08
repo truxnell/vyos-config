@@ -29,7 +29,7 @@ set firewall group network-group cloudflare-ipv4 network '104.24.0.0/14'
 set firewall group network-group cloudflare-ipv4 network '172.64.0.0/13'
 set firewall group network-group cloudflare-ipv4 network '131.0.72.0/22'
 
-set firewall group network-group multicast network '244.0.0.0/4'
+set firewall group network-group multicast network '224.0.0.0/4'
 
 set firewall group address-group k8s_plex address '10.8.20.213'
 set firewall group address-group k8s_mqtt address '10.8.20.222'
