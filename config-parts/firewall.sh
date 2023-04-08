@@ -34,3 +34,6 @@ set firewall group address-group k8s_plex address '10.8.20.213'
 set firewall group address-group plex_clients address '10.8.40.1'
 set firewall group address-group plex_clients address '10.8.40.2'
 set firewall group address-group plex_clients address '10.8.40.3'
+set firewall group address-group plex_clients address '10.8.40.4'
+
+set firewall group address-group k8s_vector_aggregator address '10.8.20.220'
