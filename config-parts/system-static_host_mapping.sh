@@ -9,8 +9,7 @@ set system static-host-mapping host-name unifi.natallan.com inet 10.5.0.10
 
 # NAS
 set system static-host-mapping host-name george.natallan.com inet 10.8.20.11
-set system static-host-mapping host-name george.natallan.com alias nas.trux.dev
-set system static-host-mapping host-name george.natallan.com alias garage.trux.dev
+set system static-host-mapping host-name george.natallan.com alias nas.natallan.com
 set system static-host-mapping host-name george.natallan.com alias s3.trux.dev
 
 # Kubernetes hosts
