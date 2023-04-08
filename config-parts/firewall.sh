@@ -30,10 +30,27 @@ set firewall group network-group cloudflare-ipv4 network '172.64.0.0/13'
 set firewall group network-group cloudflare-ipv4 network '131.0.72.0/22'
 
 set firewall group address-group k8s_plex address '10.8.20.213'
+set firewall group address-group k8s_mqtt address '10.8.20.222'
+set firewall group address-group k8s_vector_aggregator address '10.8.20.220'
+
+set firewall group address-group nas address '10.8.20.11'
 
 set firewall group address-group plex_clients address '10.8.40.1'
 set firewall group address-group plex_clients address '10.8.40.2'
 set firewall group address-group plex_clients address '10.8.40.3'
 set firewall group address-group plex_clients address '10.8.40.4'
+set firewall group address-group plex_clients address '10.8.30.10'
+set firewall group address-group plex_clients address '10.8.30.11'
+set firewall group address-group plex_clients address '10.8.30.80'
 
-set firewall group address-group k8s_vector_aggregator address '10.8.20.220'
+set firewall group address-group mqtt_clients address '10.8.30.50'
+set firewall group address-group mqtt_clients address '10.8.30.52'
+set firewall group address-group mqtt_clients address '10.8.30.100'
+set firewall group address-group mqtt_clients address '10.8.30.140'
+set firewall group address-group mqtt_clients address '10.8.30.141'
+
+set firewall group address-group wall_displays address '10.8.30.100'
+
+set firewall group address-group k8s_ingress_allowed address '10.8.30.90'
+
+set firewall group address-group vector_journald_allowed address '10.8.30.120'
