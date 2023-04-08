@@ -177,12 +177,12 @@ set firewall name iot-servers rule 4 destination group address-group 'k8s_mqtt'
 set firewall name iot-servers rule 4 destination port '1883'
 set firewall name iot-servers rule 4 protocol 'tcp'
 set firewall name iot-servers rule 4 source group address-group 'mqtt_clients'
-set firewall name iot-servers rule 5 action 'accept'
-set firewall name iot-servers rule 5 description 'Rule: accept_mqtt_from_esp'
-set firewall name iot-servers rule 5 destination group address-group 'k8s_mqtt'
-set firewall name iot-servers rule 5 destination port '1883'
-set firewall name iot-servers rule 5 protocol 'tcp'
-set firewall name iot-servers rule 5 source group address-group 'esp'
+# set firewall name iot-servers rule 5 action 'accept'
+# set firewall name iot-servers rule 5 description 'Rule: accept_mqtt_from_esp'
+# set firewall name iot-servers rule 5 destination group address-group 'k8s_mqtt'
+# set firewall name iot-servers rule 5 destination port '1883'
+# set firewall name iot-servers rule 5 protocol 'tcp'
+# set firewall name iot-servers rule 5 source group address-group 'esp'
 # set firewall name iot-servers rule 7 action 'accept'
 # set firewall name iot-servers rule 7 description 'Rule: accept_k8s_ingress_from_ereaders'
 # set firewall name iot-servers rule 7 destination group address-group 'k8s_ingress'
@@ -372,9 +372,13 @@ set firewall name servers-guest description 'From SERVERS to GUEST'
 set firewall name servers-guest enable-default-log
 
 # From SERVERS to IOT
-set firewall name servers-iot default-action 'accept'
+set firewall name servers-iot default-action 'drop'
 set firewall name servers-iot description 'From SERVERS to IOT'
 set firewall name servers-iot enable-default-log
+set firewall name servers-iot rule 2 action 'accept'
+set firewall name servers-iot rule 2 description 'Rule: accept_k8s_nodes'
+set firewall name servers-iot rule 2 protocol 'tcp'
+set firewall name servers-iot rule 2 source group address-group 'k8s_nodes'
 
 # From SERVERS to LAN
 set firewall name servers-lan default-action 'drop'
@@ -422,11 +426,14 @@ set firewall name servers-local rule 7 source group address-group 'k8s_nodes'
 # From SERVERS to SERVICES
 set firewall name servers-services default-action 'accept'
 set firewall name servers-services description 'From SERVERS to SERVICES'
-set firewall name servers-services enable-default-log
 
 # From SERVERS to TRUSTED
-set firewall name servers-trusted default-action 'accept'
+set firewall name servers-trusted default-action 'drop'
 set firewall name servers-trusted description 'From SERVERS to TRUSTED'
+set firewall name servers-trusted enable-default-log
+set firewall name servers-trusted rule 1 action 'accept'
+set firewall name servers-trusted rule 1 description 'Rule: accept_icmp'
+set firewall name servers-trusted rule 1 protocol 'icmp'
 
 # From SERVERS to VIDEO
 set firewall name servers-video default-action 'drop'
