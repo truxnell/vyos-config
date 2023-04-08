@@ -304,11 +304,11 @@ set firewall name local-video enable-default-log
 set firewall name local-kids default-action 'drop'
 set firewall name local-kids description 'From LOCAL to KIDS'
 set firewall name local-kids enable-default-log
-set firewall name local-trusted rule 1 action 'accept'
-set firewall name local-trusted rule 1 description 'Rule: accept_mdns'
-set firewall name local-trusted rule 1 destination port 'mdns'
-set firewall name local-trusted rule 1 protocol 'udp'
-set firewall name local-trusted rule 1 source port 'mdns'
+set firewall name local-kids rule 1 action 'accept'
+set firewall name local-kids rule 1 description 'Rule: accept_mdns'
+set firewall name local-kids rule 1 destination port 'mdns'
+set firewall name local-kids rule 1 protocol 'udp'
+set firewall name local-kids rule 1 source port 'mdns'
 
 # From LOCAL to WAN
 set firewall name local-wan default-action 'accept'
@@ -327,7 +327,7 @@ set firewall name servers-iot enable-default-log
 # From SERVERS to LAN
 set firewall name servers-lan default-action 'drop'
 set firewall name servers-lan description 'From SERVERS to LAN'
-set firewall name servers-iot enable-default-log
+set firewall name servers-lan enable-default-log
 set firewall name servers-lan rule 1 action 'accept'
 set firewall name servers-lan rule 1 description 'Rule: accept_icmp'
 set firewall name servers-lan rule 1 protocol 'icmp'
