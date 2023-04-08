@@ -99,6 +99,11 @@ set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 name-server
 set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 range 0 start '10.8.40.200'
 set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 range 0 stop '10.8.40.254'
 
+set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapping elise-ipad ip-address '10.8.40.1'
+set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapping elise-ipad mac-address 'ae:d5:af:1b:63:98'
+set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapping nat-phone ip-address '10.8.40.2'
+set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapping nat-phone mac-address '7a:e3:5c:43:48:d4'
+
 # Video VLAN
 set service dhcp-server shared-network-name VIDEO authoritative
 set service dhcp-server shared-network-name VIDEO ping-check
