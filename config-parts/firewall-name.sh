@@ -350,6 +350,11 @@ set firewall name local-servers rule 4 description 'Rule: accept_vector_syslog'
 set firewall name local-servers rule 4 destination group address-group 'k8s_vector_aggregator'
 set firewall name local-servers rule 4 destination port '6001'
 set firewall name local-servers rule 4 protocol 'tcp'
+set firewall name local-servers rule 5 action 'accept'
+set firewall name local-servers rule 5 description 'Rule: accept_mdns'
+set firewall name local-servers rule 5 destination port '1900,5353'
+set firewall name local-servers rule 5 destination group network-group 'multicast'
+set firewall name local-servers rule 5 protocol 'udp'
 
 # From LOCAL to SERVICES
 set firewall name local-services default-action 'accept'
