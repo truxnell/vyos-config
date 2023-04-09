@@ -22,7 +22,7 @@ set service mdns repeater interface eth1.60
 
 # SNMP server
 set service snmp community router authorization ro
-set service snmp community routers network 10.8.20.1/24
+set service snmp community routers network 10.8.20.0/24
 set service snmp community routers client 10.8.20.40
 set service snmp community routers client 10.8.20.42
 set service snmp community routers client 10.8.20.44
