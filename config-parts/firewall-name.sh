@@ -236,6 +236,7 @@ set firewall name iot-trusted rule 2 protocol 'tcp'
 set firewall name iot-trusted rule 3 action 'accept'
 set firewall name iot-trusted rule 3 description 'Rule: accept_chromecast_to_trusted_udp'
 set firewall name iot-trusted rule 3 destination port '32768-61000'
+set firewall name iot-trusted rule 3 protocol 'udp'
 
 # From IOT to VIDEO
 set firewall name iot-video default-action 'drop'
