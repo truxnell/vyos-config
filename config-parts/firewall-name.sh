@@ -9,11 +9,6 @@ set firewall name kids-lan enable-default-log
 set firewall name kids-iot default-action 'drop'
 set firewall name kids-iot description 'From KIDS to IOT'
 set firewall name kids-iot enable-default-log
-set firewall name kids-iot rule 1 action 'accept'
-set firewall name kids-iot rule 1 description 'Rule: accept_mdns'
-set firewall name kids-iot rule 1 destination port '67,68'
-set firewall name kids-iot rule 1 protocol 'udp'
-set firewall name kids-iot rule 1 source port '67,68'
 
 # From KIDS to LOCAL
 set firewall name kids-local default-action 'drop'
@@ -28,6 +23,11 @@ set firewall name kids-local rule 2 action 'accept'
 set firewall name kids-local rule 2 description 'Rule: accept_ntp'
 set firewall name kids-local rule 2 destination port 'ntp'
 set firewall name kids-local rule 2 protocol 'udp'
+set firewall name kids-local rule 3 action 'accept'
+set firewall name kids-local rule 3 description 'Rule: accept_mdns'
+set firewall name kids-local rule 3 destination port '1900,5353'
+set firewall name kids-local rule 3 destination group network-group 'multicast'
+set firewall name kids-local rule 3 protocol 'udp'
 
 # From KIDS to TRUSTED
 set firewall name kids-trusted default-action 'drop'
@@ -159,6 +159,10 @@ set firewall name iot-local rule 5 destination port 'mdns'
 set firewall name iot-local rule 5 protocol 'udp'
 set firewall name iot-local rule 5 source port 'mdns'
 set firewall name iot-local rule 6 action 'accept'
+set firewall name iot-local rule 6 description 'Rule: accept_mdns'
+set firewall name iot-local rule 6 destination port '1900,5353'
+set firewall name iot-local rule 6 destination group network-group 'multicast'
+set firewall name iot-local rule 6 protocol 'udp'
 
 # From IOT to SERVERS
 set firewall name iot-servers default-action 'drop'
@@ -439,6 +443,11 @@ set firewall name servers-local rule 7 description 'Rule: accept_speedtest_expor
 set firewall name servers-local rule 7 destination port '9798'
 set firewall name servers-local rule 7 protocol 'tcp'
 set firewall name servers-local rule 7 source group address-group 'k8s_nodes'
+set firewall name servers-local rule 8 action 'accept'
+set firewall name servers-local rule 8 description 'Rule: accept_mdns'
+set firewall name servers-local rule 8 destination port '1900,5353'
+set firewall name servers-local rule 8 destination group network-group 'multicast'
+set firewall name servers-local rule 8 protocol 'udp'
 
 # From SERVERS to SERVICES
 set firewall name servers-services default-action 'accept'
@@ -570,6 +579,11 @@ set firewall name trusted-local rule 7 action 'accept'
 set firewall name trusted-local rule 7 description 'Rule: accept_vyos_api'
 set firewall name trusted-local rule 7 destination port '8443'
 set firewall name trusted-local rule 7 protocol 'tcp'
+set firewall name trusted-local rule 8 action 'accept'
+set firewall name trusted-local rule 8 description 'Rule: accept_mdns'
+set firewall name trusted-local rule 8 destination port '1900,5353'
+set firewall name trusted-local rule 8 destination group network-group 'multicast'
+set firewall name trusted-local rule 8 protocol 'udp'
 
 # From TRUSTED to SERVERS
 set firewall name trusted-servers default-action 'accept'
