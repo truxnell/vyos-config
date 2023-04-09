@@ -237,6 +237,10 @@ set firewall name iot-trusted rule 3 action 'accept'
 set firewall name iot-trusted rule 3 description 'Rule: accept_chromecast_to_trusted_udp'
 set firewall name iot-trusted rule 3 destination port '32768-61000'
 set firewall name iot-trusted rule 3 protocol 'tcp'
+set firewall name iot-trusted rule 3 action 'accept'
+set firewall name iot-trusted rule 3 description 'Rule: accept_ssdp_to_trusted_udp'
+set firewall name iot-trusted rule 3 destination port '1900'
+set firewall name iot-trusted rule 3 protocol 'tcp'
 
 # From IOT to VIDEO
 set firewall name iot-video default-action 'drop'
@@ -323,6 +327,11 @@ set firewall name local-guest enable-default-log
 set firewall name local-iot default-action 'drop'
 set firewall name local-iot description 'From LOCAL to IOT'
 set firewall name local-iot enable-default-log
+set firewall name local-iot rule 1 action 'accept'
+set firewall name local-iot rule 1 description 'Rule: accept_mdns'
+set firewall name local-iot rule 1 destination port '1900,5353'
+set firewall name local-iot rule 1 destination group network-group 'multicast'
+set firewall name local-iot rule 1 protocol 'udp'
 
 # From LOCAL to LAN
 set firewall name local-lan default-action 'drop'
@@ -372,6 +381,11 @@ set firewall name local-trusted rule 2 description 'Rule: accept_mdns'
 set firewall name local-trusted rule 2 destination port 'mdns'
 set firewall name local-trusted rule 2 protocol 'udp'
 set firewall name local-trusted rule 2 source port 'mdns'
+set firewall name local-trusted rule 3 action 'accept'
+set firewall name local-trusted rule 3 description 'Rule: accept_mdns'
+set firewall name local-trusted rule 3 destination port '1900,5353'
+set firewall name local-trusted rule 3 destination group network-group 'multicast'
+set firewall name local-trusted rule 3 protocol 'udp'
 
 # From LOCAL to VIDEO
 set firewall name local-video default-action 'drop'
@@ -387,6 +401,11 @@ set firewall name local-kids rule 1 description 'Rule: accept_mdns'
 set firewall name local-kids rule 1 destination port 'mdns'
 set firewall name local-kids rule 1 protocol 'udp'
 set firewall name local-kids rule 1 source port 'mdns'
+set firewall name local-kids rule 2 action 'accept'
+set firewall name local-kids rule 2 description 'Rule: accept_mdns'
+set firewall name local-kids rule 2 destination port '1900,5353'
+set firewall name local-kids rule 2 destination group network-group 'multicast'
+set firewall name local-kids rule 2 protocol 'udp'
 
 # From LOCAL to WAN
 set firewall name local-wan default-action 'accept'
