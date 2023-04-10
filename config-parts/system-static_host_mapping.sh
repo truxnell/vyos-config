@@ -33,3 +33,5 @@ set system static-host-mapping host-name s3.trux.dev inet 10.8.20.11
 # Other hosts
 set system static-host-mapping host-name technocore.natallan.com inet 10.8.20.60
 set system static-host-mapping host-name technocore.natallan.com alias pikvm.trux.dev
+
+set system static-host-mapping host-name prusa.natallan.com inet 10.8.30.120
