@@ -43,6 +43,7 @@ set firewall group address-group plex_clients address '10.8.40.3'
 set firewall group address-group plex_clients address '10.8.40.4'
 set firewall group address-group plex_clients address '10.8.30.10'
 set firewall group address-group plex_clients address '10.8.30.11'
+set firewall group address-group plex_clients address '10.8.30.12'
 set firewall group address-group plex_clients address '10.8.30.80'
 
 set firewall group address-group mqtt_clients address '10.8.30.50'
@@ -54,5 +55,6 @@ set firewall group address-group mqtt_clients address '10.8.30.141'
 set firewall group address-group wall_displays address '10.8.30.100'
 
 set firewall group address-group k8s_ingress_allowed address '10.8.30.90'
+set firewall group address-group k8s_ingress_allowed address '10.8.30.10'
 
 set firewall group address-group vector_journald_allowed address '10.8.30.120'

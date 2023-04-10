@@ -56,8 +56,8 @@ set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 range 0 stop
 
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping tv-livingroom ip-address '10.8.30.10'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping tv-livingroom mac-address '14:c9:13:01:34:5a'
-set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping tv-bedroom ip-address '10.8.30.11'
-set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping tv-bedroom mac-address '80:47:86:70:24:de'
+set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping tv-middlelounge ip-address '10.8.30.11'
+set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping tv-middlelounge mac-address '80:47:86:70:24:de'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping echo-livingroom ip-address '10.8.30.20'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping echo-livingroom mac-address 'd8:be:65:b9:94:cd'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping echo-study ip-address '10.8.30.21'
@@ -103,6 +103,8 @@ set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapp
 set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapping nat-phone mac-address '7a:e3:5c:43:48:d4'
 set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapping elise-ipad ip-address '10.8.40.3'
 set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapping elise-ipad mac-address 'ae:d5:af:1b:63:98'
+set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapping elise-mobile ip-address '10.8.40.4'
+set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapping elise-mobile mac-address '0e:50:f2:0d:72:62'
 
 # Video VLAN
 set service dhcp-server shared-network-name VIDEO authoritative
