@@ -468,6 +468,11 @@ set firewall name servers-local rule 8 description 'Rule: accept_mdns'
 set firewall name servers-local rule 8 destination port '1900,5353'
 set firewall name servers-local rule 8 destination group network-group 'multicast'
 set firewall name servers-local rule 8 protocol 'udp'
+set firewall name servers-local rule 9 action 'accept'
+set firewall name servers-local rule 9 description 'Rule: accept_snmp'
+set firewall name servers-local rule 9 destination port 'snmp'
+set firewall name servers-local rule 9 destination address '10.8.20.1'
+set firewall name servers-local rule 9 protocol 'udp'
 
 # From SERVERS to SERVICES
 set firewall name servers-services default-action 'accept'
