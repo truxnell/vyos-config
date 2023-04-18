@@ -105,6 +105,8 @@ set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapp
 set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapping elise-ipad mac-address 'ae:d5:af:1b:63:98'
 set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapping elise-mobile ip-address '10.8.40.4'
 set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapping elise-mobile mac-address '0e:50:f2:0d:72:62'
+set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapping elise-desktop ip-address '10.8.40.5'
+set service dhcp-server shared-network-name KIDS subnet 10.8.40.0/24 static-mapping elise-desktop mac-address '50:3e:aa:66:13:b2'
 
 # Video VLAN
 set service dhcp-server shared-network-name VIDEO authoritative
