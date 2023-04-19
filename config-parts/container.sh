@@ -32,7 +32,7 @@ set container name coredns volume corefile mode 'ro'
 set container name coredns volume vyoshosts destination '/host/etc/hosts'
 set container name coredns volume vyoshosts source '/etc/hosts'
 set container name coredns volume vyoshosts mode 'ro'
-#
+
 # dnsdist
 set container name dnsdist cap-add 'net-bind-service'
 set container name dnsdist environment TZ value 'Australia/Melbourne'
@@ -45,7 +45,7 @@ set container name dnsdist shared-memory '0'
 set container name dnsdist volume config destination '/etc/dnsdist/dnsdist.conf'
 set container name dnsdist volume config source '/config/containers/dnsdist/config/dnsdist.conf'
 set container name dnsdist volume config mode 'ro'
-#
+
 # node-exporter
 set container name node-exporter environment procfs value '/host/proc'
 set container name node-exporter environment rootfs value '/host/rootfs'
@@ -64,14 +64,24 @@ set container name node-exporter volume rootfs source '/'
 set container name node-exporter volume sysfs destination '/host/sys'
 set container name node-exporter volume sysfs mode 'ro'
 set container name node-exporter volume sysfs source '/sys'
-#
+
+# haproxy-k8s-api
+set container name haproxy-k8s-api image 'docker.io/library/haproxy:2.7.6'
+set container name haproxy-k8s-api memory '0'
+set container name haproxy-k8s-api network services address '10.5.0.2'
+set container name haproxy-k8s-api restart 'on-failure'
+set container name haproxy-k8s-api shared-memory '0'
+set container name haproxy-k8s-api volume config destination '/usr/local/etc/haproxy/haproxy.cfg'
+set container name haproxy-k8s-api volume config source '/config/containers/haproxy/config/haproxy.cfg'
+set container name haproxy-k8s-api volume config mode 'ro'
+
 # speedtest-exporter
 set container name speedtest-exporter image 'ghcr.io/miguelndecarvalho/speedtest-exporter:v3.5.3'
 set container name speedtest-exporter memory '0'
 set container name speedtest-exporter allow-host-networks
 set container name speedtest-exporter restart 'on-failure'
 set container name speedtest-exporter shared-memory '0'
-#
+
 # unifi
 set container name unifi environment RUNAS_UID0 value 'false'
 set container name unifi environment TZ value 'Europe/Amsterdam'
