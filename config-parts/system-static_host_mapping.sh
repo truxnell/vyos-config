@@ -15,7 +15,7 @@ set system static-host-mapping host-name george.natallan.com alias s3.trux.dev
 # Kubernetes hosts
 set system static-host-mapping host-name xerxes.natallan.com inet 10.8.20.40
 set system static-host-mapping host-name tycho.natallan.com inet 10.8.20.42
-set system static-host-mapping host-name helios.natallan.com inet 10.8.20.44
+set system static-host-mapping host-name icarus.natallan.com inet 10.8.20.44
 
 # Kubernetes cluster VIP
 set system static-host-mapping host-name hegira.natallan.com inet 10.5.0.2
