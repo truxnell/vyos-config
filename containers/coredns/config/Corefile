@@ -52,7 +52,7 @@ natallan.com {
   }
 }
 
-1.10.in-addr.arpa {
+10.in-addr.arpa {
   hosts /host/etc/hosts {
     ttl 1
     reload 5s
