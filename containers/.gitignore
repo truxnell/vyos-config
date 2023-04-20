@@ -7,5 +7,6 @@
 !/coredns/
 !/dnsdist/
 !/haproxy/
+!/smtp-relay/
 !/unifi/
 !/vector-agent/
