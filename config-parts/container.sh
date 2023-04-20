@@ -101,7 +101,7 @@ set container name smtp-relay image 'ghcr.io/foxcpp/maddy:0.6.3'
 set container name smtp-relay environment SMTP_DOMAIN value "${SECRET_SMTP_FROM_DOMAIN}"
 set container name smtp-relay environment SMTP_PASSWORD value "${SECRET_SMTP_PASSWORD}"
 set container name smtp-relay environment SMTP_PORT value "${SECRET_SMTP_PORT}"
-set container name smtp-relay environment SMTP_SERVER value "${SECRET_SMTP_HOST}"
+set container name smtp-relay environment SMTP_SERVER value "${SECRET_SMTP_SERVER}"
 set container name smtp-relay environment SMTP_USERNAME value "${SECRET_SMTP_USERNAME}"
 set container name smtp-relay restart 'on-failure'
 set container name smtp-relay memory '0'
