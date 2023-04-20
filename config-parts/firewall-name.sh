@@ -416,6 +416,9 @@ set firewall name servers-guest enable-default-log
 set firewall name servers-iot default-action 'drop'
 set firewall name servers-iot description 'From SERVERS to IOT'
 set firewall name servers-iot enable-default-log
+set firewall name servers-iot rule 1 action 'accept'
+set firewall name servers-iot rule 1 description 'Rule: accept_icmp'
+set firewall name servers-iot rule 1 protocol 'icmp'
 set firewall name servers-iot rule 2 action 'accept'
 set firewall name servers-iot rule 2 description 'Rule: accept_k8s_nodes'
 set firewall name servers-iot rule 2 protocol 'tcp'
