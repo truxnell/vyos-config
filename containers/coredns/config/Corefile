@@ -1,6 +1,8 @@
 (common) {
   errors
-  log error
+  log . {
+    class error
+  }
   reload
   loadbalance
   cache
@@ -44,15 +46,8 @@ trux.dev {
   import k8s_gateway
 }
 
-natallan.com {
+. {
   import common
-  hosts /host/etc/hosts {
-    ttl 1
-    reload 5s
-  }
-}
-
-8.10.in-addr.arpa {
   hosts /host/etc/hosts {
     ttl 1
     reload 5s
