@@ -95,3 +95,18 @@ set container name unifi restart 'on-failure'
 set container name unifi shared-memory '0'
 set container name unifi volume data destination '/unifi'
 set container name unifi volume data source '/config/containers/unifi'
+
+# smtp-relay
+set container name smtp-relay image 'ghcr.io/foxcpp/maddy:0.6.3'
+set container name smtp-relay environment SMTP_DOMAIN value "${SECRET_SMTP_FROM_DOMAIN}"
+set container name smtp-relay environment SMTP_PASSWORD value "${SECRET_SMTP_PASSWORD}"
+set container name smtp-relay environment SMTP_PORT value "${SECRET_SMTP_PORT}"
+set container name smtp-relay environment SMTP_SERVER value "${SECRET_SMTP_HOST}"
+set container name smtp-relay environment SMTP_USERNAME value "${SECRET_SMTP_USERNAME}"
+set container name smtp-relay restart 'on-failure'
+set container name smtp-relay memory '0'
+set container name smtp-relay network services address '10.5.0.11'
+set container name smtp-relay shared-memory '0'
+set container name smtp-relay volume smtp-relay-config destination '/data/maddy.conf'
+set container name smtp-relay volume smtp-relay-config mode 'ro'
+set container name smtp-relay volume smtp-relay-config source '/config/containers/smtp-relay/config/maddy.conf'
