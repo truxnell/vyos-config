@@ -7,6 +7,11 @@ set system static-host-mapping host-name gateway.natallan.com alias ipv4.trux.de
 set system static-host-mapping host-name unifi inet 10.5.0.10
 set system static-host-mapping host-name unifi.natallan.com inet 10.5.0.10
 
+# Smtp-relay
+set system static-host-mapping host-name smtp-relay inet 10.5.0.11
+set system static-host-mapping host-name smtp-relay.natallan.com inet 10.5.0.11
+set system static-host-mapping host-name smtp-relay.trux.dev inet 10.5.0.11
+
 # NAS
 set system static-host-mapping host-name george.natallan.com inet 10.8.20.11
 set system static-host-mapping host-name george.natallan.com alias nas.natallan.com
