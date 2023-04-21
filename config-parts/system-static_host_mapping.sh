@@ -13,10 +13,10 @@ set system static-host-mapping host-name smtp-relay.natallan.com inet 10.5.0.11
 set system static-host-mapping host-name smtp-relay.trux.dev inet 10.5.0.11
 
 # NAS
-set system static-host-mapping host-name cortex.natallan.com inet 10.8.20.11
-set system static-host-mapping host-name cortex.natallan.com alias nas.natallan.com
-set system static-host-mapping host-name cortex.natallan.com alias s3.trux.dev
-set system static-host-mapping host-name cortex.natallan.com alias george.trux.dev
+set system static-host-mapping host-name helios.natallan.com inet 10.8.20.11
+set system static-host-mapping host-name helios.natallan.com alias nas.natallan.com
+set system static-host-mapping host-name helios.natallan.com alias s3.trux.dev
+set system static-host-mapping host-name helios.natallan.com alias george.trux.dev
 
 # Kubernetes hosts
 set system static-host-mapping host-name xerxes.natallan.com inet 10.8.20.40
