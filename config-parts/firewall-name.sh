@@ -726,7 +726,7 @@ set firewall name wan-servers rule 1 protocol 'tcp'
 set firewall name wan-servers rule 1 source group network-group 'cloudflare-ipv4'
 set firewall name wan-servers rule 2 action 'accept'
 set firewall name wan-servers rule 2 description 'Rule: factorio_servers'
-set firewall name wan-servers rule 2 destination group address-group 'k8s_ingress'
+set firewall name wan-servers rule 2 destination group address-group 'k8s_factorio'
 set firewall name wan-servers rule 2 destination port '34201'
 set firewall name wan-servers rule 2 protocol 'udp'
 

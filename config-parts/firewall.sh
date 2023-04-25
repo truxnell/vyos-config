@@ -33,6 +33,7 @@ set firewall group network-group multicast network '224.0.0.0/4'
 
 set firewall group address-group k8s_plex address '10.8.20.213'
 set firewall group address-group k8s_mqtt address '10.8.20.222'
+set firewall group address-group k8s_factorio address '10.8.20.230'
 set firewall group address-group k8s_vector_aggregator address '10.8.20.220'
 
 set firewall group address-group nas address '10.8.20.11'
