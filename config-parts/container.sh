@@ -129,3 +129,9 @@ set container name podman-exporter environment CONTAINER_HOST value 'tcp://10.8.
 set container name podman-exporter image 'quay.io/navidys/prometheus-podman-exporter:v1.3.0'
 set container name podman-exporter memory '0'
 set container name podman-exporter shared-memory '0'
+
+# smartctl-exporter
+set container name smartctl-exporter allow-host-networks
+set container name smartctl-exporter image 'quay.io/prometheuscommunity/smartctl-exporter:v0.9.1'
+set container name smartctl-exporter memory '0'
+set container name smartctl-exporter shared-memory '0'
