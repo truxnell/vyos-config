@@ -84,7 +84,7 @@ set container name speedtest-exporter shared-memory '0'
 
 # unifi
 set container name unifi environment RUNAS_UID0 value 'false'
-set container name unifi environment TZ value 'Europe/Amsterdam'
+set container name unifi environment TZ value 'Australia/Melbourne'
 set container name unifi environment UNIFI_GID value '999'
 set container name unifi environment UNIFI_STDOUT value 'true'
 set container name unifi environment UNIFI_UID value '999'
@@ -115,7 +115,7 @@ set container name smtp-relay volume smtp-relay-config source '/config/container
 # vnstat
 set container name vnstat allow-host-networks
 set container name vnstat environment EXCLUDE_PATTERN value '^docker|^veth|^br-|^lxc|^eth[1234]'
-set container name vnstat environment TZ value 'America/New_York'
+set container name vnstat environment TZ value 'Australia/Melbourne'
 set container name vnstat image 'ghcr.io/vergoh/vnstat:2.10'
 set container name vnstat memory '0'
 set container name vnstat shared-memory '0'
