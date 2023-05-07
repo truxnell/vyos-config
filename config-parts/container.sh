@@ -130,8 +130,13 @@ set container name podman-exporter image 'quay.io/navidys/prometheus-podman-expo
 set container name podman-exporter memory '0'
 set container name podman-exporter shared-memory '0'
 
-# smartctl-exporter
+# Smartctl-exporter
+
 set container name smartctl-exporter allow-host-networks
+set container name smartctl-exporter disable
 set container name smartctl-exporter image 'quay.io/prometheuscommunity/smartctl-exporter:v0.9.1'
 set container name smartctl-exporter memory '0'
 set container name smartctl-exporter shared-memory '0'
+set container name smartctl-exporter volume smartctl-exporter-devfs destination '/hostdev'
+set container name smartctl-exporter volume smartctl-exporter-devfs mode 'ro'
+set container name smartctl-exporter volume smartctl-exporter-devfs source '/dev'
