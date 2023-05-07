@@ -23,3 +23,4 @@ alias podman="sudo podman"
 alias update="cd /config && git pull && ./apply-config.sh"
 END
 #
+podman system service --time=0 tcp://10.8.10.1:8888 >/dev/null 2>&1 &
