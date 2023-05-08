@@ -483,6 +483,10 @@ set firewall name servers-local rule 11 action 'accept'
 set firewall name servers-local rule 11 description 'Rule: accept_smartclt_exporter'
 set firewall name servers-local rule 11 destination port '9633'
 set firewall name servers-local rule 11 protocol 'tcp'
+set firewall name servers-local rule 12 action 'accept'
+set firewall name servers-local rule 12 description 'Rule: accept_vnstat_exporter'
+set firewall name servers-local rule 12 destination port '8685'
+set firewall name servers-local rule 12 protocol 'tcp'
 
 # From SERVERS to SERVICES
 set firewall name servers-services default-action 'accept'
