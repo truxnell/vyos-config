@@ -50,6 +50,7 @@ set firewall group address-group plex_clients address '10.8.30.80'
 set firewall group address-group mqtt_clients address '10.8.30.50'
 set firewall group address-group mqtt_clients address '10.8.30.52'
 set firewall group address-group mqtt_clients address '10.8.30.100'
+set firewall group address-group mqtt_clients address '10.8.30.120'
 set firewall group address-group mqtt_clients address '10.8.30.140'
 set firewall group address-group mqtt_clients address '10.8.30.141'
 
