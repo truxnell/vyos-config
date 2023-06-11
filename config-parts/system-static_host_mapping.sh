@@ -30,6 +30,7 @@ set system static-host-mapping host-name hegira.natallan.com inet 10.5.0.2
 
 set system static-host-mapping host-name vector.trux.dev inet 10.8.20.220
 set system static-host-mapping host-name mqtt.trux.dev inet 10.8.20.222
+set system static-host-mapping host-name irc.truxnell.net inet 10.8.20.223
 
 # NAS ingress
 set system static-host-mapping host-name syncthing.trux.dev inet 10.8.20.11

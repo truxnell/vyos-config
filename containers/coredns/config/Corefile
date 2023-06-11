@@ -46,8 +46,23 @@ trux.dev {
   import k8s_gateway
 }
 
-. {
+natallan.com {
   import common
+  hosts /host/etc/hosts {
+    ttl 1
+    reload 5s
+  }
+}
+
+truxnell.net {
+  import common
+  hosts /host/etc/hosts {
+    ttl 1
+    reload 5s
+  }
+}
+
+8.10.in-addr.arpa {
   hosts /host/etc/hosts {
     ttl 1
     reload 5s
