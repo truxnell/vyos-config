@@ -32,6 +32,9 @@ set system static-host-mapping host-name vector.trux.dev inet 10.8.20.220
 set system static-host-mapping host-name mqtt.trux.dev inet 10.8.20.222
 set system static-host-mapping host-name irc.truxnell.net inet 10.8.20.223
 
+# truxnell.net
+set system static-host-mapping host-name fedi.truxnell.net inet 10.8.20.210
+
 # NAS ingress
 set system static-host-mapping host-name syncthing.trux.dev inet 10.8.20.11
 set system static-host-mapping host-name minio.trux.dev inet 10.8.20.11
