@@ -30,6 +30,20 @@ set nat destination rule 112 translation port '34203'
 # set nat destination rule 113 translation address '10.8.20.230'
 # set nat destination rule 113 translation port '34204'
 
+set nat destination rule 113 description 'inspIRCd'
+set nat destination rule 113 destination port '6697'
+set nat destination rule 113 inbound-interface 'eth0'
+set nat destination rule 113 protocol 'tcp'
+set nat destination rule 113 translation address '10.8.20.223'
+set nat destination rule 113 translation port '6697'
+
+set nat destination rule 114 description 'inspIRCd'
+set nat destination rule 114 destination port '7001'
+set nat destination rule 114 inbound-interface 'eth0'
+set nat destination rule 114 protocol 'tcp'
+set nat destination rule 114 translation address '10.8.20.223'
+set nat destination rule 114 translation port '7001'
+#
 # Force DNS
 set nat destination rule 102 description 'Force DNS for IoT'
 set nat destination rule 102 destination address '!10.5.0.4'
