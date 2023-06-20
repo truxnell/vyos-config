@@ -54,7 +54,7 @@ natallan.com {
   }
 }
 
-truxnell.net {
+voltaicforge.com {
   import common
   hosts /host/etc/hosts {
     ttl 1
