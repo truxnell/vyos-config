@@ -564,6 +564,9 @@ set firewall name services-servers description 'From SERVICES to SERVERS'
 set firewall name services-trusted default-action 'drop'
 set firewall name services-trusted description 'From SERVICES to TRUSTED'
 set firewall name services-trusted enable-default-log
+set firewall name services-trusted rule 1 action 'accept'
+set firewall name services-trusted rule 1 description 'Rule: accept_icmp'
+set firewall name services-trusted rule 1 protocol 'icmp'
 
 # From SERVICES to VIDEO
 set firewall name services-video default-action 'drop'
