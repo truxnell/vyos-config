@@ -516,6 +516,9 @@ set firewall name servers-video rule 2 source group address-group 'k8s_nodes'
 set firewall name servers-kids default-action 'drop'
 set firewall name servers-kids description 'From SERVER to KIDS'
 set firewall name servers-kids enable-default-log
+set firewall name servers-kids rule 1 action 'accept'
+set firewall name servers-kids rule 1 description 'Rule: accept_icmp'
+set firewall name servers-kids rule 1 protocol 'icmp'
 
 # From SERVERS to WAN
 set firewall name servers-wan default-action 'accept'
@@ -530,6 +533,9 @@ set firewall name services-guest enable-default-log
 set firewall name services-iot default-action 'drop'
 set firewall name services-iot description 'From SERVICES to IOT'
 set firewall name services-iot enable-default-log
+set firewall name services-iot rule 1 action 'accept'
+set firewall name services-iot rule 1 description 'Rule: accept_icmp'
+set firewall name services-iot rule 1 protocol 'icmp'
 
 # From SERVICES to LAN
 set firewall name services-lan default-action 'drop'
@@ -563,6 +569,9 @@ set firewall name services-trusted enable-default-log
 set firewall name services-video default-action 'drop'
 set firewall name services-video description 'From SERVICES to VIDEO'
 set firewall name services-video enable-default-log
+set firewall name services-video rule 1 action 'accept'
+set firewall name services-video rule 1 description 'Rule: accept_icmp'
+set firewall name services-video rule 1 protocol 'icmp'
 
 # From SERVICES to KIDS
 set firewall name services-kids default-action 'drop'
