@@ -152,3 +152,35 @@ endpoints:
       - type: pushover
         description: "WLED on monitor in study down"
         send-on-resolved: true
+  - name: Rack-HS110
+    group: IoT
+    url: icmp://10.8.30.130
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "Rack HS110 power switch down"
+        send-on-resolved: true
+  - name: Prusa-KP115
+    group: IoT
+    url: icmp://10.8.30.131
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "Prusa KP115 power switch down"
+        send-on-resolved: true
+  - name: Washing-Machine-KP115
+    group: IoT
+    url: icmp://10.8.30.132
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "Washing Machine KP115 power switch down"
+        send-on-resolved: true
+  - name: Printer
+    group: IoT
+    url: icmp://10.8.30.132
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "Washing Machine KP115 power switch down"
+        send-on-resolved: true
