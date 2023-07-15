@@ -135,11 +135,21 @@ set container name podman-exporter shared-memory '0'
 
 # Smartctl-exporter
 
-set container name smartctl-exporter allow-host-networks
-set container name smartctl-exporter disable
-set container name smartctl-exporter image 'quay.io/prometheuscommunity/smartctl-exporter:v0.9.1'
-set container name smartctl-exporter memory '0'
-set container name smartctl-exporter shared-memory '0'
-set container name smartctl-exporter volume smartctl-exporter-devfs destination '/hostdev'
-set container name smartctl-exporter volume smartctl-exporter-devfs mode 'ro'
-set container name smartctl-exporter volume smartctl-exporter-devfs source '/dev'
+# set container name smartctl-exporter allow-host-networks
+# set container name smartctl-exporter image 'quay.io/prometheuscommunity/smartctl-exporter:v0.9.1'
+# set container name smartctl-exporter memory '0'
+# set container name smartctl-exporter shared-memory '0'
+# set container name smartctl-exporter volume smartctl-exporter-devfs destination '/hostdev'
+# set container name smartctl-exporter volume smartctl-exporter-devfs mode 'ro'
+# set container name smartctl-exporter volume smartctl-exporter-devfs source '/dev'
+
+# Gatus
+set container name gatus cap-add 'net-bind-service'
+set container name gatus cap-add 'net-raw'
+set container name gatus image 'ghcr.io/twin/gatus:v5.4.0'
+set container name gatus memory '0'
+set container name gatus network containers address '10.10.254.7'
+set container name gatus shared-memory '0'
+set container name gatus volume gatus-config source '/config/containers/gatus/config/config.yaml'
+set container name gatus volume gatus-config destination '/config/config.yaml'
+set container name gatus volume gatus-config mode 'ro'

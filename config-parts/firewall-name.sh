@@ -728,6 +728,11 @@ set firewall name wan-local rule 1 action 'accept'
 set firewall name wan-local rule 1 description 'Rule: accept_wireguard'
 set firewall name wan-local rule 1 destination port '51820'
 set firewall name wan-local rule 1 protocol 'udp'
+# set firewall name wan-local rule 10 action 'accept'
+# set firewall name wan-local rule 10 protocol 'icmp'
+# set firewall name wan-local rule 10 state established 'enable'
+# set firewall name wan-local rule 10 state new 'enable'
+# set firewall name wan-local rule 10 state related 'enable'
 
 # From WAN to SERVERS
 set firewall name wan-servers default-action 'drop'

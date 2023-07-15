@@ -1,0 +1,96 @@
+# web:
+#   port: 443
+#   tls:
+#     certificate-file: /config/certificate.crt
+#     private-key-file: /config/certificate.key
+
+storage:
+  type: memory
+
+metrics: true
+
+ui:
+  title: Home Status | Gatus
+  header: Home Status
+
+alerting:
+  pushover:
+    application-token: "${SECRET_GATUS_PUSHOVER_APP_TOKEN}"
+    user-key: "${SECRET_GATUS_PUSHOVER_USER_KEY}"
+
+endpoints:
+  # DNS
+  - name: external-dns
+    group: DNS
+    url: 10.0.5.4
+    dns:
+      query-name: "google.com"
+      query-type: "A"
+    conditions: ["[DNS_RCODE] == NOERROR"]
+    alerts:
+      - type: pushover
+        description: "External DNS: Cannot reach google.com"
+        send-on-resolved: true
+  - name: internal-dns
+    group: DNS
+    url: 10.0.5.4
+    dns:
+      query-name: "gateway.natallan.com"
+      query-type: "A"
+    conditions: ["[BODY] == 10.8.12.1", "[DNS_RCODE] == NOERROR"]
+    alerts:
+      - type: discord
+        description: "Internal DNS: Cannot reach gateway"
+        send-on-resolved: true
+
+  # Servers
+  - name: Xerxes
+    group: Servers
+    url: icmp://10.8.20.40
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "Xerxes down"
+        send-on-resolved: true
+  - name: Shodan
+    group: Servers
+    url: icmp://10.8.20.42
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "Shodan down"
+        send-on-resolved: true
+  - name: Icarus
+    group: Servers
+    url: icmp://10.8.20.44
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "Icarus down"
+        send-on-resolved: true
+  - name: PiKVM
+    group: Servers
+    url: icmp://10.8.20.60
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "PiKVM down"
+        send-on-resolved: true
+  - name: Helios
+    group: Servers
+    url: icmp://10.8.20.11
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "Helios down"
+        send-on-resolved: true
+
+  # IoT
+  - name: Brewpiless
+    group: IoT
+    url: icmp://10.8.12.200
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "Brewpiless down"
+        send-on-resolved: true
