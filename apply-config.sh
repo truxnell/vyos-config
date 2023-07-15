@@ -64,7 +64,7 @@ else
 
 	# Commit and save
 	echo "Committing and saving config"
-	commit-confirm 2
+	confirm
 	# save
 
 	# Clean obsolete container images
