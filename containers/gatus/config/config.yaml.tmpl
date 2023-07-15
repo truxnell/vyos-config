@@ -39,9 +39,9 @@ endpoints:
     dns:
       query-name: "gateway.natallan.com"
       query-type: "A"
-    conditions: ["[BODY] == 10.8.12.1", "[DNS_RCODE] == NOERROR"]
+    conditions: ["[BODY] == 10.8.10.1", "[DNS_RCODE] == NOERROR"]
     alerts:
-      - type: discord
+      - type: pushover
         description: "Internal DNS: Cannot reach gateway"
         send-on-resolved: true
 
@@ -95,4 +95,60 @@ endpoints:
     alerts:
       - type: pushover
         description: "Brewpiless down"
+        send-on-resolved: true
+  - name: Weatherstation
+    group: IoT
+    url: icmp://weatherstation.natallan.com
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "Weatherstation down"
+        send-on-resolved: true
+  - name: Zigbee-poe
+    group: IoT
+    url: icmp://zigbee-poe.natallan.com
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "Zigbee-poe down"
+        send-on-resolved: true
+  - name: Prusa
+    group: IoT
+    url: icmp://prusa.natallan.com
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "Prusa down"
+        send-on-resolved: true
+  - name: Blinds-1
+    group: IoT
+    url: icmp://prusa.natallan.com
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "Blinds-1 down"
+        send-on-resolved: true
+  - name: 
+    group: IoT
+    url: icmp://firetablet-study.natallan.com
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "Firetablet in study down"
+        send-on-resolved: true
+  - name: 
+    group: IoT
+    url: icmp://wled-monitor.natallan.com
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "WLED on monitor in study down"
+        send-on-resolved: true
+  - name: 
+    group: IoT
+    url: icmp://wled-desk.natallan.com
+    conditions: ["[CONNECTED] == true"]
+    alerts:
+      - type: pushover
+        description: "WLED on desk in study down"
         send-on-resolved: true
