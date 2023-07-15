@@ -23,7 +23,7 @@ endpoints:
   # DNS
   - name: external-dns
     group: DNS
-    url: 10.0.5.4
+    url: 10.5.0.4
     dns:
       query-name: "google.com"
       query-type: "A"
@@ -34,7 +34,7 @@ endpoints:
         send-on-resolved: true
   - name: internal-dns
     group: DNS
-    url: 10.0.5.4
+    url: 10.5.0.4
     dns:
       query-name: "gateway.natallan.com"
       query-type: "A"
