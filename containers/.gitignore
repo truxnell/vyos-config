@@ -4,7 +4,6 @@
 # Track certain files and directories
 !.gitignore
 
-!/coredns/
 !/dnsdist/
 !/haproxy/
 !/smtp-relay/
