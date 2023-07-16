@@ -4,8 +4,8 @@
 
 ; SOA Records
 $TTL 3600
-$ORIGIN bjw-s.dev.
-@ 3600 IN SOA gateway.bjw-s.tech. gateway.bjw-s.tech. (
+$ORIGIN trux.dev.
+@ 3600 IN SOA gateway.natallan.com. gateway.natallan.com. (
   1682790096         ; serial number (epoch timestamp)
   7200               ; refresh period
   3600               ; retry period
@@ -14,13 +14,12 @@ $ORIGIN bjw-s.dev.
 )
 
 ; NS Records
-@                          IN  NS gateway.bjw-s.tech.
+@                          IN  NS gateway.natallan.com.
 
 ; Containers
-onepassword-connect        IN  A 10.5.0.5
-pihole                     IN  A 10.5.0.7
+gatus                      IN  A 10.5.0.12
 
 ; CNAME Records
-s3                         IN  CNAME nas.bjw-s.tech.
-minio                      IN  CNAME nas.bjw-s.tech.
-vpn                        IN  CNAME gateway.bjw-s.tech.
+s3                         IN  CNAME nas.natallan.com.
+minio                      IN  CNAME nas.natallan.com.
+vpn                        IN  CNAME gateway.natallan.com.

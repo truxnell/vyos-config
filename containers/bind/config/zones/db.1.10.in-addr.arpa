@@ -5,7 +5,7 @@
 ; SOA Records
 $TTL 3600
 $ORIGIN 1.10.in-addr.arpa.
-@ 3600 IN SOA gateway.bjw-s.tech. gateway.bjw-s.tech. (
+@ 3600 IN SOA gateway.natallan.com. gateway.natallan.com. (
   1682790096         ; serial number (epoch timestamp)
   7200               ; refresh period
   3600               ; retry period
@@ -14,69 +14,69 @@ $ORIGIN 1.10.in-addr.arpa.
 )
 
 ; NS Records
-@                          IN  NS gateway.bjw-s.tech.
+@                          IN  NS gateway.natallan.com.
 
 ; Reset origin
 $ORIGIN in-addr.arpa.
 
 ; LAN
-1.0.1.10                   IN  PTR  gateway.bjw-s.tech.
+1.0.1.10                   IN  PTR  gateway.natallan.com.
 
 ; Servers
-11.1.1.10                  IN  PTR  librarium.bjw-s.tech.
-31.1.1.10                  IN  PTR  delta.bjw-s.tech.
-32.1.1.10                  IN  PTR  enigma.bjw-s.tech.
-33.1.1.10                  IN  PTR  felix.bjw-s.tech.
-51.1.1.10                  IN  PTR  horus.bjw-s.tech.
-52.1.1.10                  IN  PTR  diego.bjw-s.tech.
+11.1.1.10                  IN  PTR  librarium.natallan.com.
+31.1.1.10                  IN  PTR  delta.natallan.com.
+32.1.1.10                  IN  PTR  enigma.natallan.com.
+33.1.1.10                  IN  PTR  felix.natallan.com.
+51.1.1.10                  IN  PTR  horus.natallan.com.
+52.1.1.10                  IN  PTR  diego.natallan.com.
 
 ; Trusted
-21.2.1.10                  IN  PTR  bernd-macbook.bjw-s.tech.
-22.2.1.10                  IN  PTR  manyie-macbook.bjw-s.tech.
-31.2.1.10                  IN  PTR  bernd-iphone.bjw-s.tech.
-32.2.1.10                  IN  PTR  bernd-ipad.bjw-s.tech.
-33.2.1.10                  IN  PTR  manyie-iphone.bjw-s.tech.
-34.2.1.10                  IN  PTR  manyie-ipad.bjw-s.tech.
-35.2.1.10                  IN  PTR  eva-ipad.bjw-s.tech.
-36.2.1.10                  IN  PTR  kitchen-ipad.bjw-s.tech.
+21.2.1.10                  IN  PTR  bernd-macbook.natallan.com.
+22.2.1.10                  IN  PTR  manyie-macbook.natallan.com.
+31.2.1.10                  IN  PTR  bernd-iphone.natallan.com.
+32.2.1.10                  IN  PTR  bernd-ipad.natallan.com.
+33.2.1.10                  IN  PTR  manyie-iphone.natallan.com.
+34.2.1.10                  IN  PTR  manyie-ipad.natallan.com.
+35.2.1.10                  IN  PTR  eva-ipad.natallan.com.
+36.2.1.10                  IN  PTR  kitchen-ipad.natallan.com.
 
 ; IOT
-11.3.1.10                  IN  PTR  attic-office-3dprinter.bjw-s.tech.
-12.3.1.10                  IN  PTR  kitchen-oven.bjw-s.tech.
-13.3.1.10                  IN  PTR  kitchen-coffeemaker.bjw-s.tech.
-14.3.1.10                  IN  PTR  livingroom-tv.bjw-s.tech.
-15.3.1.10                  IN  PTR  livingroom-harmony-hub.bjw-s.tech.
-16.3.1.10                  IN  PTR  livingroom-shield.bjw-s.tech.
-17.3.1.10                  IN  PTR  livingroom-receiver.bjw-s.tech.
-18.3.1.10                  IN  PTR  livingroom-vacuum.bjw-s.tech.
-19.3.1.10                  IN  PTR  livingroom-airpurifier.bjw-s.tech.
-20.3.1.10                  IN  PTR  livingroom-nintendo-switch.bjw-s.tech.
-21.3.1.10                  IN  PTR  garden-wlanthermo.bjw-s.tech.
-22.3.1.10                  IN  PTR  upstairs-vacuum.bjw-s.tech.
-23.3.1.10                  IN  PTR  hallway-tado-bridge.bjw-s.tech.
-24.3.1.10                  IN  PTR  attic-office-hue-bridge.bjw-s.tech.
-31.3.1.10                  IN  PTR  attic-office-desk-plug.bjw-s.tech.
-32.3.1.10                  IN  PTR  upstairs-office-desk-plug.bjw-s.tech.
-33.3.1.10                  IN  PTR  attic-office-3dprinter-plug.bjw-s.tech.
-34.3.1.10                  IN  PTR  spare-p1eu-1.bjw-s.tech.
-35.3.1.10                  IN  PTR  upstairs-office-speaker-esp.bjw-s.tech.
-36.3.1.10                  IN  PTR  attic-office-speaker-esp.bjw-s.tech.
-45.3.1.10                  IN  PTR  hallway-p1reader-esp.bjw-s.tech.
-46.3.1.10                  IN  PTR  hallway-zigbee-adapter.bjw-s.tech.
-51.3.1.10                  IN  PTR  bernd-ereader.bjw-s.tech.
-52.3.1.10                  IN  PTR  manyie-ereader.bjw-s.tech.
-53.3.1.10                  IN  PTR  hallway-tablet.bjw-s.tech.
-54.3.1.10                  IN  PTR  garage-tablet.bjw-s.tech.
-55.3.1.10                  IN  PTR  study-printer.bjw-s.tech.
-61.3.1.10                  IN  PTR  kitchen-sonos.bjw-s.tech.
-62.3.1.10                  IN  PTR  upstairs-office-sonos.bjw-s.tech.
-63.3.1.10                  IN  PTR  livingroom-sonos.bjw-s.tech.
-65.3.1.10                  IN  PTR  bedroom-eva-sonos.bjw-s.tech.
-66.3.1.10                  IN  PTR  livingroom-receiver-sonos.bjw-s.tech.
-67.3.1.10                  IN  PTR  livingroom-sonos-move.bjw-s.tech.
-121.3.1.10                 IN  PTR  delta.bjw-s.tech.
-122.3.1.10                 IN  PTR  enigma.bjw-s.tech.
-123.3.1.10                 IN  PTR  felix.bjw-s.tech.
+11.3.1.10                  IN  PTR  attic-office-3dprinter.natallan.com.
+12.3.1.10                  IN  PTR  kitchen-oven.natallan.com.
+13.3.1.10                  IN  PTR  kitchen-coffeemaker.natallan.com.
+14.3.1.10                  IN  PTR  livingroom-tv.natallan.com.
+15.3.1.10                  IN  PTR  livingroom-harmony-hub.natallan.com.
+16.3.1.10                  IN  PTR  livingroom-shield.natallan.com.
+17.3.1.10                  IN  PTR  livingroom-receiver.natallan.com.
+18.3.1.10                  IN  PTR  livingroom-vacuum.natallan.com.
+19.3.1.10                  IN  PTR  livingroom-airpurifier.natallan.com.
+20.3.1.10                  IN  PTR  livingroom-nintendo-switch.natallan.com.
+21.3.1.10                  IN  PTR  garden-wlanthermo.natallan.com.
+22.3.1.10                  IN  PTR  upstairs-vacuum.natallan.com.
+23.3.1.10                  IN  PTR  hallway-tado-bridge.natallan.com.
+24.3.1.10                  IN  PTR  attic-office-hue-bridge.natallan.com.
+31.3.1.10                  IN  PTR  attic-office-desk-plug.natallan.com.
+32.3.1.10                  IN  PTR  upstairs-office-desk-plug.natallan.com.
+33.3.1.10                  IN  PTR  attic-office-3dprinter-plug.natallan.com.
+34.3.1.10                  IN  PTR  spare-p1eu-1.natallan.com.
+35.3.1.10                  IN  PTR  upstairs-office-speaker-esp.natallan.com.
+36.3.1.10                  IN  PTR  attic-office-speaker-esp.natallan.com.
+45.3.1.10                  IN  PTR  hallway-p1reader-esp.natallan.com.
+46.3.1.10                  IN  PTR  hallway-zigbee-adapter.natallan.com.
+51.3.1.10                  IN  PTR  bernd-ereader.natallan.com.
+52.3.1.10                  IN  PTR  manyie-ereader.natallan.com.
+53.3.1.10                  IN  PTR  hallway-tablet.natallan.com.
+54.3.1.10                  IN  PTR  garage-tablet.natallan.com.
+55.3.1.10                  IN  PTR  study-printer.natallan.com.
+61.3.1.10                  IN  PTR  kitchen-sonos.natallan.com.
+62.3.1.10                  IN  PTR  upstairs-office-sonos.natallan.com.
+63.3.1.10                  IN  PTR  livingroom-sonos.natallan.com.
+65.3.1.10                  IN  PTR  bedroom-eva-sonos.natallan.com.
+66.3.1.10                  IN  PTR  livingroom-receiver-sonos.natallan.com.
+67.3.1.10                  IN  PTR  livingroom-sonos-move.natallan.com.
+121.3.1.10                 IN  PTR  delta.natallan.com.
+122.3.1.10                 IN  PTR  enigma.natallan.com.
+123.3.1.10                 IN  PTR  felix.natallan.com.
 
 ; Video
-12.4.1.10                  IN  PTR  driveway-camera-doorbell.bjw-s.tech.
+12.4.1.10                  IN  PTR  driveway-camera-doorbell.natallan.com.
