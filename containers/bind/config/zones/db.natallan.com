@@ -26,7 +26,6 @@ shodan                        IN  A  10.8.20.42
 icarus                        IN  A  10.8.20.44
 technocore                    IN  A  10.8.20.60
 
-
 ; IOT
 brewpiless                    IN  A  10.8.12.200
 weatherstation                IN  A  10.8.30.90
@@ -39,12 +38,13 @@ wled-monitor                  IN  A  10.8.30.52
 rack-HS110                    IN  A  10.8.30.130
 prusa-KP115                   IN  A  10.8.30.131
 washing-Machine-KP115         IN  A  10.8.30.132
-printer                       IN  A  10.8.30.132
+printer                       IN  A  10.8.12.218
 
 ; Video
 
 ; Containers
 hegira                        IN  A  10.5.0.2
+smtp-relay                    IN  A  10.5.0.11
 
 ; CNAME records
 nas                           IN  CNAME  helios.natallan.com.

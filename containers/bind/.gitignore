@@ -9,6 +9,7 @@
 /config/*
 
 !/config/named.conf
+!/config/rndc.key.tmpl
 !/config/zones/
 /config/zones/*
 !/config/zones/db.*
