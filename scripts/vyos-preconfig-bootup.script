@@ -3,6 +3,10 @@
 # Any modifications required to work around unfixed bugs or use
 # services not available through the VyOS CLI system can be placed here.
 
+# Create folders
+mkdir -p /tmp/bind/cache
+chown -R 104 /tmp/bind/cache
+
 # Mount USB Backup Drive
 backupdest=/media/usb-backup
 mkdir -p "$backupdest"
