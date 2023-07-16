@@ -1,0 +1,14 @@
+
+# Ignore everything
+/*
+
+# Track certain files and directories
+!.gitignore
+
+!/config/
+/config/*
+
+!/config/named.conf
+!/config/zones/
+/config/zones/*
+!/config/zones/db.*
