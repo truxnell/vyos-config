@@ -45,6 +45,3 @@ $ORIGIN in-addr.arpa.
 
 ; Video
 
-; Containers
-2.0.5.10                   IN  PTR  hegira.natallan.com.
-11.0.5.10                  IN  PTR  smtp-relay.natallan.com.
