@@ -12,6 +12,7 @@
 !scripts/
 !config-parts/
 !containers/
+!secrets/
 
 # CI
 !.github/
