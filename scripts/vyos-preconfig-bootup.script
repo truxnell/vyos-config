@@ -6,6 +6,10 @@
 # Create folders
 mkdir -p /tmp/bind/cache
 chown -R 104 /tmp/bind/cache
+mkdir -p /config/secrets/certs/_.trux.dev/
+touch /config/secrets/certs/_.trux.dev/cert.pem
+touch /config/secrets/certs/_.trux.dev/privkey.pem
+chown -R 104 /config/secrets/certs/
 
 # Mount USB Backup Drive
 backupdest=/media/usb-backup
