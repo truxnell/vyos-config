@@ -161,7 +161,7 @@ set container name podman-exporter shared-memory '0'
 # Gatus
 set container name gatus cap-add 'net-bind-service'
 set container name gatus cap-add 'net-raw'
-set container name gatus image 'ghcr.io/twin/gatus:v5.4.0'
+set container name gatus image 'ghcr.io/twin/gatus:v5.5.1'
 set container name gatus memory '0'
 set container name gatus network services address '10.5.0.12'
 set container name gatus shared-memory '0'
