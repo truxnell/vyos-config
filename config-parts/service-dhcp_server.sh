@@ -84,6 +84,8 @@ set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mappi
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping kp115-washingmachine mac-address '14:eb:b6:61:97:3f'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping octoprint-prusa ip-address '10.8.30.120'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping octoprint-prusa mac-address 'dc:a6:32:0b:71:cf'
+set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping synchrona ip-address '10.8.30.121'
+set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping synchrona-prusa mac-address 'b8:27:eb:61:67:03'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping tuya-blind-study ip-address '10.8.30.140'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping tuya-blind-study mac-address 'e0:98:06:84:8e:81'
 set service dhcp-server shared-network-name IOT subnet 10.8.30.0/24 static-mapping tuya-blind-lounge ip-address '10.8.30.141'
