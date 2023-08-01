@@ -19,8 +19,8 @@ $ORIGIN trux.dev.
 ; Metallb
 mqtt                       IN  A 10.8.20.222
 vector                     IN  A 10.8.20.220
-sonarr                     IN  nas.natallan.com
-sabnzbd                    IN  nas.natallan.com
+sonarr                     IN  CNAME nas.natallan.com
+sabnzbd                    IN  CNAME nas.natallan.com
 
 
 ; Containers
