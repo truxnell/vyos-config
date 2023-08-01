@@ -6,7 +6,7 @@
 $TTL 3600
 $ORIGIN trux.dev.
 @ 3600 IN SOA gateway.natallan.com. gateway.natallan.com. (
-  1682790097         ; serial number (epoch timestamp)
+  1682790098         ; serial number (epoch timestamp)
   7200               ; refresh period
   3600               ; retry period
   1209600            ; expire time
