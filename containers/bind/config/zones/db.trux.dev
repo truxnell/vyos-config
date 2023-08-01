@@ -19,9 +19,6 @@ $ORIGIN trux.dev.
 ; Metallb
 mqtt                       IN  A 10.8.20.222
 vector                     IN  A 10.8.20.220
-sonarr                     IN  CNAME nas.natallan.com
-sabnzbd                    IN  CNAME nas.natallan.com
-
 
 ; Containers
 gatus                      IN  A 10.5.0.12
@@ -29,5 +26,6 @@ gatus                      IN  A 10.5.0.12
 ; CNAME Records
 syncthing                  IN  CNAME nas.natallan.com
 s3                         IN  CNAME nas.natallan.com.
+sabnzbd                    IN  CNAME nas.natallan.com
 minio                      IN  CNAME nas.natallan.com.
 vpn                        IN  CNAME gateway.natallan.com.
