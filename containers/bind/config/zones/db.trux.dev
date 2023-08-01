@@ -6,7 +6,7 @@
 $TTL 3600
 $ORIGIN trux.dev.
 @ 3600 IN SOA gateway.natallan.com. gateway.natallan.com. (
-  1682790096         ; serial number (epoch timestamp)
+  1682790097         ; serial number (epoch timestamp)
   7200               ; refresh period
   3600               ; retry period
   1209600            ; expire time
@@ -25,7 +25,7 @@ gatus                      IN  A 10.5.0.12
 
 ; CNAME Records
 syncthing                  IN  CNAME nas.natallan.com
-s3                         IN  CNAME nas.natallan.com.
+s3                         IN  CNAME nas.natallan.com
 sabnzbd                    IN  CNAME nas.natallan.com
-minio                      IN  CNAME nas.natallan.com.
-vpn                        IN  CNAME gateway.natallan.com.
+minio                      IN  CNAME nas.natallan.com
+vpn                        IN  CNAME gateway.natallan.com
