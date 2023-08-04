@@ -27,5 +27,7 @@ gatus                      IN  A 10.5.0.12
 syncthing                  IN  CNAME nas.natallan.com.
 s3                         IN  CNAME nas.natallan.com.
 sabnzbd                    IN  CNAME nas.natallan.com.
+qbittorrent                IN  CNAME nas.natallan.com.
+filebrowser                IN  CNAME nas.natallan.com.
 minio                      IN  CNAME nas.natallan.com.
 vpn                        IN  CNAME gateway.natallan.com.
