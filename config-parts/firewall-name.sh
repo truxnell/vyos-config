@@ -765,6 +765,11 @@ set firewall name wan-servers rule 4 description 'Rule: inspircd server'
 set firewall name wan-servers rule 4 destination group address-group 'k8s_inspircd'
 set firewall name wan-servers rule 4 destination port '7001'
 set firewall name wan-servers rule 4 protocol 'tcp'
+set firewall name wan-servers rule 5 action 'accept'
+set firewall name wan-servers rule 5 description 'Rule: qbittorrent server'
+set firewall name wan-servers rule 5 destination group address-group 'nas'
+set firewall name wan-servers rule 5 destination port '56956'
+set firewall name wan-servers rule 5 protocol 'tcp'
 
 # From WAN to SERVICES
 set firewall name wan-services default-action 'drop'
