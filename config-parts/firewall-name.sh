@@ -768,7 +768,7 @@ set firewall name wan-servers rule 4 protocol 'tcp'
 set firewall name wan-servers rule 5 action 'accept'
 set firewall name wan-servers rule 5 description 'Rule: qbittorrent server'
 set firewall name wan-servers rule 5 destination group address-group 'nas'
-set firewall name wan-servers rule 5 destination port '56956'
+set firewall name wan-servers rule 5 destination port '32189'
 set firewall name wan-servers rule 5 protocol 'tcp'
 
 # From WAN to SERVICES
