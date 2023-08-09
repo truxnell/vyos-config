@@ -48,7 +48,7 @@ set nat destination rule 114 translation port '7001'
 set nat destination rule 115 description 'qbittorrent'
 set nat destination rule 115 destination port '32189'
 set nat destination rule 115 inbound-interface 'eth0'
-set nat destination rule 115 protocol 'tcp'
+set nat destination rule 115 protocol 'tcp_udp'
 set nat destination rule 115 translation address '10.8.20.11'
 set nat destination rule 115 translation port '32189'
 #
