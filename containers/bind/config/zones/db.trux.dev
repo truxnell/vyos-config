@@ -37,3 +37,4 @@ qbittorrent                IN  CNAME nas.natallan.com.
 filebrowser                IN  CNAME nas.natallan.com.
 minio                      IN  CNAME nas.natallan.com.
 vpn                        IN  CNAME gateway.natallan.com.
+deemix                     IN  CNAME nas.natallan.com.
