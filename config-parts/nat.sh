@@ -52,12 +52,12 @@ set nat destination rule 115 protocol 'tcp'
 set nat destination rule 115 translation address '10.8.20.11'
 set nat destination rule 115 translation port '32189'
 
-set nat destination rule 115 description 'qbittorrent'
-set nat destination rule 115 destination port '32190'
-set nat destination rule 115 inbound-interface 'eth0'
-set nat destination rule 115 protocol 'tcp'
-set nat destination rule 115 translation address '10.8.20.11'
-set nat destination rule 115 translation port '32190'
+set nat destination rule 116 description 'qbittorrent'
+set nat destination rule 116 destination port '32190'
+set nat destination rule 116 inbound-interface 'eth0'
+set nat destination rule 116 protocol 'tcp'
+set nat destination rule 116 translation address '10.8.20.11'
+set nat destination rule 116 translation port '32190'
 
 # Force DNS
 set nat destination rule 102 description 'Force DNS for IoT'
