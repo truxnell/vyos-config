@@ -775,6 +775,11 @@ set firewall name wan-servers rule 6 description 'Rule: qbittorrent server'
 set firewall name wan-servers rule 6 destination group address-group 'nas'
 set firewall name wan-servers rule 6 destination port '32190'
 set firewall name wan-servers rule 6 protocol 'tcp_udp'
+set firewall name wan-servers rule 6 action 'accept'
+set firewall name wan-servers rule 6 description 'Rule: qbittorrent server'
+set firewall name wan-servers rule 6 destination group address-group 'nas'
+set firewall name wan-servers rule 6 destination port '32191'
+set firewall name wan-servers rule 6 protocol 'tcp_udp'
 
 # From WAN to SERVICES
 set firewall name wan-services default-action 'drop'
