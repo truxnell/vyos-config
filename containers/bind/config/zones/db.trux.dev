@@ -34,7 +34,8 @@ radarr                     IN  CNAME nas.natallan.com.
 readarr                    IN  CNAME nas.natallan.com.
 lidarr                     IN  CNAME nas.natallan.com.
 qbittorrent                IN  CNAME nas.natallan.com.
-qbittorrent-mam            IN  CNAME nas.natallan.com.
+qbittorrent-lidarr         IN  CNAME nas.natallan.com.
+qbittorrent-readar         IN  CNAME nas.natallan.com.
 filebrowser                IN  CNAME nas.natallan.com.
 minio                      IN  CNAME nas.natallan.com.
 vpn                        IN  CNAME gateway.natallan.com.
