@@ -216,6 +216,12 @@ set firewall name iot-servers rule 10 destination group address-group 'k8s_vecto
 set firewall name iot-servers rule 10 destination port '6002'
 set firewall name iot-servers rule 10 protocol 'tcp'
 set firewall name iot-servers rule 10 source group address-group 'vector_journald_allowed'
+set firewall name iot-servers rule 11 action 'accept'
+set firewall name iot-servers rule 11 description 'Rule: accept_k8s_ingress_from_plex_clients'
+set firewall name iot-servers rule 11 destination group address-group 'k8s_ingress'
+set firewall name iot-servers rule 11 destination port 'http,https'
+set firewall name iot-servers rule 11 protocol 'tcp'
+set firewall name iot-servers rule 11 source group address-group 'plex_clients'
 
 # From IOT to SERVICES
 set firewall name iot-services default-action 'accept'
