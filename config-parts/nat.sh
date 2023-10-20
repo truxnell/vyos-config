@@ -59,12 +59,12 @@ set nat destination rule 116 protocol 'tcp_udp'
 set nat destination rule 116 translation address '10.8.20.11'
 set nat destination rule 116 translation port '32190'
 
-set nat destination rule 116 description 'qbittorrent'
-set nat destination rule 116 destination port '32191'
-set nat destination rule 116 inbound-interface 'eth0'
-set nat destination rule 116 protocol 'tcp_udp'
-set nat destination rule 116 translation address '10.8.20.11'
-set nat destination rule 116 translation port '32191'
+set nat destination rule 117 description 'qbittorrent'
+set nat destination rule 117 destination port '32191'
+set nat destination rule 117 inbound-interface 'eth0'
+set nat destination rule 117 protocol 'tcp_udp'
+set nat destination rule 117 translation address '10.8.20.11'
+set nat destination rule 117 translation port '32191'
 
 # Force DNS
 set nat destination rule 102 description 'Force DNS for IoT'
