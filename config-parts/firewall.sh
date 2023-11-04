@@ -39,10 +39,7 @@ set firewall group address-group k8s_inspircd address '10.8.20.223'
 
 set firewall group address-group nas address '10.8.20.11'
 
-set firewall group address-group plex_clients address '10.8.40.1'
-set firewall group address-group plex_clients address '10.8.40.2'
-set firewall group address-group plex_clients address '10.8.40.3'
-set firewall group address-group plex_clients address '10.8.40.4'
+set firewall group address-group plex_clients address '10.8.40.1-10.8.40.254'
 set firewall group address-group plex_clients address '10.8.30.10'
 set firewall group address-group plex_clients address '10.8.30.11'
 set firewall group address-group plex_clients address '10.8.30.12'

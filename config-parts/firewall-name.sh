@@ -43,13 +43,13 @@ set firewall name kids-servers rule 1 description 'Rule: accept_plex_from_plex_c
 set firewall name kids-servers rule 1 destination group address-group 'k8s_plex'
 set firewall name kids-servers rule 1 destination port '32400'
 set firewall name kids-servers rule 1 protocol 'tcp'
-set firewall name kids-servers rule 1 source group address-group 'plex_clients'
+# set firewall name kids-servers rule 1 source group address-group 'plex_clients'
 set firewall name kids-servers rule 2 action 'accept'
 set firewall name kids-servers rule 2 description 'Rule: accept_k8s_ingress_from_plex_clients'
 set firewall name kids-servers rule 2 destination group address-group 'k8s_ingress'
 set firewall name kids-servers rule 2 destination port 'http,https'
 set firewall name kids-servers rule 2 protocol 'tcp'
-set firewall name kids-servers rule 2 source group address-group 'plex_clients'
+# set firewall name kids-servers rule 2 source group address-group 'plex_clients'
 
 # From KIDS to SERVICES
 set firewall name kids-services default-action 'drop'
