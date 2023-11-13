@@ -132,7 +132,7 @@ set container name smtp-relay volume smtp-relay-config source '/config/container
 set container name vnstat allow-host-networks
 set container name vnstat environment EXCLUDE_PATTERN value '^docker|^veth|^br-|^lxc|^eth[1234]'
 set container name vnstat environment TZ value 'Australia/Melbourne'
-set container name vnstat image 'ghcr.io/vergoh/vnstat:2.10'
+set container name vnstat image 'ghcr.io/vergoh/vnstat:2.11'
 set container name vnstat memory '0'
 set container name vnstat shared-memory '0'
 set container name vnstat volume vnstat-data source '/config/containers/vnstat'
