@@ -52,7 +52,7 @@ set container name bind volume cache mode 'rw'
 # dnsdist
 set container name dnsdist cap-add 'net-bind-service'
 set container name dnsdist environment TZ value 'Australia/Melbourne'
-set container name dnsdist image 'docker.io/powerdns/dnsdist-18:1.8.2'
+set container name dnsdist image 'docker.io/powerdns/dnsdist-18:1.8.3'
 set container name dnsdist arguments '--log-timestamps'
 set container name dnsdist memory '0'
 set container name dnsdist network services address '10.5.0.4'
