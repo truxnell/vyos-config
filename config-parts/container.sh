@@ -113,7 +113,7 @@ set container name unifi volume data destination '/unifi'
 set container name unifi volume data source '/config/containers/unifi'
 
 # smtp-relay
-set container name smtp-relay image 'ghcr.io/foxcpp/maddy:0.7.0'
+set container name smtp-relay image 'ghcr.io/foxcpp/maddy:0.7.1'
 set container name smtp-relay environment SMTP_DOMAIN value "${SECRET_SMTP_FROM_DOMAIN}"
 set container name smtp-relay environment SMTP_PASSWORD value "${SECRET_SMTP_PASSWORD}"
 set container name smtp-relay environment SMTP_PORT value "${SECRET_SMTP_PORT}"
