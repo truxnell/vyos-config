@@ -3,6 +3,8 @@
 My VyOs is archived for the following reasons:
 
 - Chineesium router blew its SSD and took down entire network
+- VyOS is really not welcoming of individuals.  Rolling releases are often hard/dont upgrade, workarounds are requird and they are making it more and more difficult to build without buying a license for stable
+- I want my DNS/router to just work and continuing to run VyOS feels like a losing deal with more and more worarounds.
 - Now just running my UDMP and DNS is replaced by my 'old' UDM pro and https://github.com/truxnell/nix-config.
 - Running 'cusotm' DNS and some containers now on nixOS on two devices for redundancy
 
