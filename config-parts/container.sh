@@ -142,7 +142,7 @@ set container name vnstat volume vnstat-data mode 'rw'
 # podman-exporter
 set container name podman-exporter allow-host-networks
 set container name podman-exporter environment CONTAINER_HOST value 'tcp://10.8.10.1:8888'
-set container name podman-exporter image 'quay.io/navidys/prometheus-podman-exporter:v1.6.0'
+set container name podman-exporter image 'quay.io/navidys/prometheus-podman-exporter:v1.11.0'
 set container name podman-exporter memory '0'
 set container name podman-exporter shared-memory '0'
 
