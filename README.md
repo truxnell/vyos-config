@@ -1,3 +1,11 @@
+## Archived!
+
+My VyOs is archived for the following reasons:
+
+- Chineesium router blew its SSD and took down entire network
+- Now just running my UDMP and DNS is replaced by my 'old' UDM pro and https://github.com/truxnell/nix-config.
+- Running 'cusotm' DNS and some containers now on nixOS on two devices for redundancy
+
 # vyos-config
 
 My VyOS config.
